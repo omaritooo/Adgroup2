@@ -1,5 +1,6 @@
 <template>
   <div class="bg-white">
+    <Navbar />
     <Innovation />
     <Three />
     <Portfolio />
