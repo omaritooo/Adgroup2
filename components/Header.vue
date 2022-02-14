@@ -2,7 +2,8 @@
     <div id="canvas_container"></div>
 </template>
 
-<script>
+<script>import * as THREE from 'three'
+
 export default {
 
 }

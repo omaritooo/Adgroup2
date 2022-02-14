@@ -1,20 +1,18 @@
 <template>
-    <div class="pb-64">
+    <div class="pb-64 lg:pr-32">
         <nav class="relative flex flex-wrap justify-around bg-blueGray-500">
             <nuxt-link to="/">
                 <img class="w-48 h-48" src="/ad-logo.svg" />
             </nuxt-link>
             <div class="my-auto">
-                <div :class="showMenu ? 'flex' : 'hidden'" class="absolute">
-                    <transition
-                        enter-active-class="transition duration-500 ease-out"
-                        enter-class="transform scale-95 opacity-0"
-                        enter-to-class="transform scale-100 opacity-100"
-                        leave-active-class="transition duration-500 ease-in"
-                        leave-class="transform scale-100 opacity-100"
-                        leave-to-class="transform scale-95 opacity-0"
-                    >
+                <div
+                    :class="showMenu ? 'flex opacity-100 transition duration-500' : 'hidden opacity-0'"
+                    class="absolute transition duration-500"
+                >
+                    <transition name="fade">
                         <ul
+                            v-if="showMenu"
+                            :class="showMenu ? 'opacity-100 transition duration-500' : 'hidden opacity-0'"
                             class="flex flex-col text-black list-none transition duration-500 md:gap-y-5 md:gap-x-7"
                         >
                             <li class="nav-item">
@@ -63,7 +61,7 @@
                         <span class="sr-only">Open main menu</span>
                         <div class="relative mx-auto group w-fit">
                             <div
-                                :class="showMenu ? 'bg-gradient-to-r from-[#000303] via-[#000000] to-[#000000] text-7xl  bottom-[32%] right-[34%]' : ''"
+                                :class="showMenu ? 'bg-gradient-to-r from-[#000303] via-[#000000] to-[#000000] text-7xl   -translate-x-5 -translate-y-7' : ''"
                                 class="absolute z-20 p-1 duration-500 transform bg-gradient-to-r from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF] rounded-full text-7xl -bottom-4 -right-2"
                             ></div>
                             <div
@@ -99,4 +97,11 @@ export default {
 </script>
 
 <style>
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
 </style>

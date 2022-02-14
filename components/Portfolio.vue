@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-red-300">
+    <div class="bg-white">
         <div class="flex h-screen py-64 pl-32">
             <div class="flex flex-col w-1/3 my-auto text-center gap-y-2">
                 <h1 class="text-3xl font-medium">Portfolio</h1>
