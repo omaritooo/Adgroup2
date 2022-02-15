@@ -1,13 +1,13 @@
 <template>
-    <div class="flex-col justify-around h-screen pt-48 subpixel-antialiased bg-white">
-        <div class="relative flex justify-center pb-36">
-            <div class="w-1/2 my-auto">
-                <h1 class="w-1/2 text-4xl font-bold text-center text-gray-900">LET’S GET STARTED</h1>
+    <div class="flex-col justify-around h-screen pt-48 subpixel-antialiased bg-gray-100 rounded-t-3xl rouded-t-lg">
+        <div class="relative flex flex-col justify-center gap-y-6 lg:flex-row pb-36">
+            <div class="w-full px-6 my-auto lg:w-1/2">
+                <h1 class="text-4xl font-bold text-center text-gray-900 lg:w-1/2">LET’S GET STARTED</h1>
                 <p
-                    class="w-1/2 text-3xl font-thin text-center text-gray-900 text-clip"
+                    class="text-3xl font-thin text-center text-gray-900 lg:w-1/2 text-clip"
                 >Contact us now and tell us more about your project</p>
             </div>
-            <div class="order-first w-1/2 mb-6 lg:mb-0 lg:w-1/3 lg:order-last">
+            <div class="order-last w-full px-6 mx-auto mb-6 lg:mx-0 lg:mb-0 lg:w-1/3 lg:order-last">
                 <form class="flex flex-col w-11/12 text-black gap-y-3">
                     <input
                         type="text"
@@ -59,14 +59,14 @@
                 </div>
             </nuxt-link>
         </div>
-        <div class="bg-[#141414] relative flex px-36 py-16 justify-around gap-x-11">
-            <div class="flex justify-start my-auto text-white gap-x-11">
+        <div class="bg-[#141414] relative flex px-12 lg:px-36 py-16 justify-around gap-x-11">
+            <div class="justify-start hidden my-auto text-white lg:flex gap-x-11">
                 <div>+20 226309636</div>
                 <div>CARE@ADGROUP.TECH</div>
             </div>
             <img class="absolute top-6 left-[49%]" src="/adglogo.svg" />
             <!-- <div class="w-auto mx-auto my-auto"></div> -->
-            <div class="flex justify-end my-auto text-white gap-x-11">
+            <div class="flex justify-end my-auto text-white gap-x-3 lg:gap-x-11">
                 <div>Home</div>
                 <div>Portfolio</div>
                 <div>Clients</div>

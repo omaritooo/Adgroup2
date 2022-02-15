@@ -1,46 +1,49 @@
 <template>
-    <div class="h-screen px-48 pt-20 pb-48 bg-white">
+    <div class="h-screen px-48 pt-20 pb-48 ">
         <div class="relative flex flex-row justify-around mx-auto">
             <!-- <div class="w-1/4 p-56 translate-y-40 bg-green-400 rounded-lg h-1/2 -rotate-30"></div>
                 <div class="w-1/4 p-56 duration-150 transform bg-green-400 hover:scale-y-125 h-1/2"></div>
                 <div
                     class="w-1/4 p-56 transform translate-y-40 bg-green-400 rounded-lg hover:scale-y-125 h-1/2 rotate-30"
             ></div>-->
-            <div
-                v-for="(t, index) in three"
-                :key="t.index"
-                :class="{
-                    ' even:translate-x-3/4 even:rotate-30 even:translate-y-56 last:z-50 last:translate-x-0 last:-translate-y-10 last:rotate-0   ': switcher == 2,
-                    ' even:-translate-x-3/4 even:-rotate-30 even:translate-y-40 first:z-50 first:-translate-x-0 first:-translate-y-10 first:rotate-0   ': switcher == 0,
-                    ' ': switcher == 1
-                }"
-                class="absolute w-1/2 transition-all duration-300 ease-in-out top-1/2 left-1/4 first:-translate-x-3/4 last:translate-x-3/4 first:-rotate-30 even:z-30 last:translate-y-56 first:translate-y-40 last:rotate-30 h-1/2"
-            >
+            <div class="w-fit">
                 <div
-                    class="relative rotate-0 rounded-lg w-fit group"
-                    @click="arraymove(three, index)"
+                    v-for="(t, index) in three"
+                    :key="t.index"
+                    :class="{
+                        ' even:!translate-x-3/4 even:!rotate-30 even:!translate-y-56 last:!z-50 last:!translate-x-1 last:!-translate-y-0 last:!rotate-[0]   ': switcher == 2,
+                        ' even:!-translate-x-3/4 even:!-rotate-30 even:!translate-y-56  first:!z-50 first:!-translate-x-1 first:!translate-y-10 first:!-rotate-[0]   ': switcher == 0,
+                        ' even:!translate-x-0 even:!rotate-0': switcher == 1,
+                        '!z-50' : switcher == index
+                    }"
+                    class="absolute w-1/3 transition-all duration-300 ease-in-out top-1/2 left-1/3 first:-translate-x-3/4 last:translate-x-3/4 first:-rotate-30 last:translate-y-56 first:translate-y-40 last:rotate-30 h-1/2"
                 >
                     <div
-                        v-show="t.status"
-                        :class="{ 'bg-gradient-to-r from-[#C19B3F] to-[#AD904B]': t.color === 'orange', 'bg-gradient-to-l from-[#4082BF] to-[#50BED5]': t.color === 'yellow', 'bg-gradient-to-r from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF]': 'green' === t.color }"
-                        class="w-[100%] h-[100%] rounded-lg absolute top-0 left-0 z-20"
-                    >
-                        <div class="flex flex-col py-8 my-auto gap-y-5">
-                            <img :src="t.logo" class="w-32 h-32 mx-auto" :alt="t.logo" />
-                            <p class="px-10 text-xl font-light text-justify text-white">{{ t.desc }}</p>
+                        class="relative rotate-0 rounded-lg w-fit group"
+                        @click="arraymove(three, index)"
+                    >   {{index}}
+                        <div
+                            v-show="t.status"
+                            :class="{ 'bg-gradient-to-r from-[#C19B3F] to-[#AD904B]': t.color === 'orange', 'bg-gradient-to-l from-[#4082BF] to-[#50BED5]': t.color === 'yellow', 'bg-gradient-to-r from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF]': 'green' === t.color }"
+                            class="w-[100%] h-[100%] rounded-lg absolute top-0 left-0 z-20"
+                        >
+                            <div class="flex flex-col py-8 my-auto gap-y-5">
+                                <img :src="t.logo" class="w-32 h-32 mx-auto" :alt="t.logo" />
+                                <p class="px-10 text-xl font-light text-justify text-white">{{ t.desc }}</p>
+                            </div>
+                            <button
+                                class="absolute px-10 py-6 text-2xl bg-[#F6DE00] bottom-10 left-[35%] mx-auto rounded-lg shadow-lg"
+                            >Explore</button>
                         </div>
-                        <button
-                            class="absolute px-10 py-6 text-2xl bg-[#F6DE00] bottom-10 left-[35%] mx-auto rounded-lg shadow-lg"
-                        >Explore</button>
-                    </div>
-                    <div class="rounded-g">
-                        <img
-                            width="600px"
-                            height="600px"
-                            class="rounded-lg shadow-inner"
-                            :src="t.img"
-                            alt
-                        />
+                        <div class="rounded-g">
+                            <img
+                                width="600px"
+                                height="600px"
+                                class="rounded-lg shadow-inner"
+                                :src="t.img"
+                                alt
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -153,35 +156,15 @@ export default {
     left: 0;
     opacity: 0.8; /* for demo purpose  */
 }
-.shadowbox {
+/* .shadowbox {
     box-shadow: inset 0px 0px 30px 30px rgba(0, 0, 0, 0.35);
     @apply rounded-lg;
-}
+} */
 img {
     position: relative;
 
     z-index: -2;
 }
 
-.card {
-    transition: all 0.5s;
-}
-.card-enter, .card-leave-to
-/* .card-leave-active for <2.1.8 */ {
-    opacity: 0;
-    transform: scale(0);
-}
-.card-enter-to {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.card-leave-active {
-    /*position: absolute;*/
-}
-
-.card-move {
-    opacity: 1;
-    transition: all 0.5s;
-}
+/*  */
 </style>

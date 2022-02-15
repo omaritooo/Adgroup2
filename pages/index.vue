@@ -1,13 +1,13 @@
 <template>
-  <div class="bg-white">
+  <div class="bg-gray-300">
     <Navbar id="navbar" />
-    <Graphics />
+    <!-- <Graphics /> -->
     <Innovation />
     <Three />
 
     <Portfolio />
     <Clients />
-    <Footer />
+    <Footer  />
   </div>
 </template>
 

@@ -1,33 +1,33 @@
 <template>
-    <div class="bg-white">
-        <div class="flex h-screen py-64 pl-32">
-            <div class="flex flex-col w-1/3 my-auto text-center gap-y-2">
-                <h1 class="text-3xl font-medium">Portfolio</h1>
-                <h2 class="text-2xl font-light">Previous work and portfolio</h2>
+    <div class="bg-white rounded-3xl">
+        <div class="flex flex-col h-screen py-12 lg:pl-32 lg:flex-row lg:py-64">
+            <div class="flex flex-col w-full mx-auto my-auto text-center lg:mx-0 lg:w-1/3 gap-y-2">
+                <h1 class="text-3xl font-medium lg:text-6xl">Portfolio</h1>
+                <h2 class="text-2xl font-light lg:text-4xl">Previous work and portfolio</h2>
                 <p
-                    class="text-xl"
+                    class="text-xl lg:text-2xl"
                 >Constant improvement for businesses and technologies is what we aim for, by devoting our expertise and hard work into each project we work on.</p>
             </div>
-            <div class="w-1/2 py-24 ml-auto">
+            <div class="w-full py-2 lg:py-24 lg:ml-auto lg:w-1/2">
                 <client-only>
                     <swiper class="swiper" :options="swiperOption">
                         <swiper-slide>
-                            <img src="/img13.png" class="w-full h-full bg-black" alt />
+                            <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
                         </swiper-slide>
                         <swiper-slide>
-                            <img src="/img13.png" class="w-full h-full bg-black" alt />
+                            <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
                         </swiper-slide>
                         <swiper-slide>
-                            <img src="/img13.png" class="w-full h-full bg-black" alt />
+                            <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
                         </swiper-slide>
                         <swiper-slide>
-                            <img src="/img13.png" class="w-full h-full bg-black" alt />
+                            <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
                         </swiper-slide>
                         <swiper-slide>
-                            <img src="/img13.png" class="w-full h-full bg-black" alt />
+                            <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
                         </swiper-slide>
                         <swiper-slide>
-                            <img src="/img13.png" class="w-full h-full bg-black" alt />
+                            <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
                         </swiper-slide>
                     </swiper>
                 </client-only>
