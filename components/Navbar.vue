@@ -1,5 +1,5 @@
 <template>
-    <div class="pb-64 lg:pr-32">
+    <div class="lg:pr-32">
         <nav class="relative flex flex-wrap justify-around bg-blueGray-500">
             <nuxt-link to="/">
                 <img class="w-48 h-48" src="/ad-logo.svg" />

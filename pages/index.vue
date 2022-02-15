@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white">
     <Navbar id="navbar" />
-    <!-- <Graphics /> -->
+    <Graphics />
     <Innovation />
     <Three />
 
