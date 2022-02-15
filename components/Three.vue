@@ -1,42 +1,50 @@
 <template>
     <div class="h-screen px-48 pt-20 pb-48 bg-white">
-        <transition name="card">
-            <div class="relative flex flex-row justify-around mx-auto">
-                <!-- <div class="w-1/4 p-56 translate-y-40 bg-green-400 rounded-lg h-1/2 -rotate-30"></div>
+        <div class="relative flex flex-row justify-around mx-auto">
+            <!-- <div class="w-1/4 p-56 translate-y-40 bg-green-400 rounded-lg h-1/2 -rotate-30"></div>
                 <div class="w-1/4 p-56 duration-150 transform bg-green-400 hover:scale-y-125 h-1/2"></div>
                 <div
                     class="w-1/4 p-56 transform translate-y-40 bg-green-400 rounded-lg hover:scale-y-125 h-1/2 rotate-30"
-                ></div>-->
+            ></div>-->
+            <div
+                v-for="(t, index) in three"
+                :key="t.index"
+                :class="{
+                    ' even:translate-x-3/4 even:rotate-30 even:translate-y-56 last:z-50 last:-translate-x-[0%] last:-translate-y-8 last:-rotate-0   ': switcher == 2,
+                    ' even:-translate-x-3/4 even:-rotate-30 even:translate-y-40 first:z-50 first:-translate-x-[0%] first:-translate-y-0 first:-rotate-0   ': switcher == 0,
+                    '': switcher == 1
+                }"
+                class="absolute w-1/2 transition-all duration-300 ease-in-out top-1/2 left-1/4 first:-translate-x-3/4 last:translate-x-3/4 first:-rotate-30 even:z-30 last:translate-y-56 first:translate-y-40 last:rotate-30 h-1/2"
+            >
                 <div
-                    v-for="(t, index) in three"
-                    :key="t.index"
-                    :class="{
-                        ' even:translate-x-96 even:rotate-30 even:translate-y-40 last:z-50 last:-translate-x-0 last:-translate-y-0 last:-rotate-0   ': switcher == 2,
-                        ' even:-translate-x-96 even:-rotate-30 even:translate-y-40 first:z-50 first:-translate-x-0 first:-translate-y-0 first:-rotate-0   ': switcher == 0
-                    }"
-                    class="absolute w-1/2 transition-all duration-300 ease-in-out top-1/2 left-1/4 first:-translate-x-[600px] last:translate-x-[600px] first:-rotate-30 even:z-30 last:translate-y-40 first:translate-y-40 last:rotate-30 h-1/2"
-                    @click="arraymove(three, index, 0)"
+                    class="relative rotate-0 rounded-lg w-fit group"
+                    @click="arraymove(three, index)"
                 >
-                    <div class="relative rotate-0 rounded-lg w-fit group">
-                        <div
-                            v-if="t.status"
-                            :class="{ 'bg-orange-500': t.color === 'orange', 'bg-yellow-500': t.color === 'yellow', 'bg-gradient-to-r from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF]': 'green' === t.color }"
-                            class="w-[100%] h-[100%] rounded-lg absolute top-0 left-0 z-20"
-                        >
-                            <div class="flex flex-col py-8 gap-y-5">
-                                <h1 class="text-3xl text-center text-white top-10">{{ t.title }}</h1>
-                                <p
-                                    class="px-10 text-xl font-light text-justify text-white"
-                                >{{ t.desc }}</p>
-                            </div>
+                    <div
+                        v-show="t.status"
+                        :class="{ 'bg-gradient-to-r from-[#C19B3F] to-[#AD904B]': t.color === 'orange', 'bg-gradient-to-l from-[#4082BF] to-[#50BED5]': t.color === 'yellow', 'bg-gradient-to-r from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF]': 'green' === t.color }"
+                        class="w-[100%] h-[100%] rounded-lg absolute top-0 left-0 z-20"
+                    >
+                        <div class="flex flex-col py-8 my-auto gap-y-5">
+                            <h1 class="text-3xl text-center text-white top-10">{{ index }}</h1>
+                            <p class="px-10 text-xl font-light text-justify text-white">{{ t.desc }}</p>
                         </div>
-                        <div class="rounded-g">
-                            <img width class="rounded-lg shadow-inner" :src="t.img" alt />
-                        </div>
+                        <button
+                            class="absolute px-10 py-6 text-2xl bg-[#F6DE00] bottom-10 left-[35%] mx-auto rounded-lg shadow-lg"
+                        >Explore</button>
+                    </div>
+                    <div class="rounded-g">
+                        <img
+                            width="600px"
+                            height="600px"
+                            class="rounded-lg shadow-inner"
+                            :src="t.img"
+                            alt
+                        />
                     </div>
                 </div>
             </div>
-        </transition>
+        </div>
     </div>
 </template>
 
@@ -65,43 +73,69 @@ export default {
                     title: 'Smarty',
                     img: '/img15.png',
                     color: 'yellow',
-                    desc: 'Imagine your customer checking their new houses while setting at your work office',
+                    desc: 'A whole new world and what’s happening inside this world can change our prespective and perception of the reality',
 
                     status: false
 
                 },
             ],
-            switcher: ''
+            switcher: 0,
+            test1: false,
+            test2: false,
+            test3: false,
         }
     },
     methods: {
-        arraymove(arr, fromIndex, toIndex) {
+        arraymove(arr, fromIndex) {
+            const element = arr[fromIndex];
+            arr.splice(fromIndex, element);
             if (fromIndex === 1) {
                 arr[fromIndex].status = !arr[fromIndex].status;
                 arr[fromIndex - 1].status = false;
                 arr[fromIndex + 1].status = false;
                 this.switcher = fromIndex;
             }
+            if (fromIndex === 0) {
+                arr[fromIndex].status = !arr[fromIndex].status;
+                arr[fromIndex + 1].status = false;
+                arr[fromIndex + 2].status = false;
+                this.switcher = fromIndex;
+
+            }
+            if (fromIndex === 2) {
+                arr[fromIndex].status = !arr[fromIndex].status;
+                arr[fromIndex - 1].status = false;
+                arr[fromIndex - 2].status = false;
+                this.switcher = fromIndex;
+
+            }
             else {
-                const element = arr[fromIndex];
-                arr.splice(fromIndex, 1);
-                arr.splice(toIndex, 0, element);
-                if (fromIndex === 0) {
-                    arr[fromIndex].status = false;
-                    arr[fromIndex + 1].status = true;
-                    arr[fromIndex + 2].status = false;
-                    this.switcher = fromIndex;
 
-                }
-                if (fromIndex === 2) {
-                    arr[fromIndex].status = false;
-                    arr[fromIndex - 1].status = true;
-                    arr[fromIndex - 2].status = false;
-                    this.switcher = fromIndex;
-
-                }
                 console.log(arr)
             }
+            // arr[fromIndex].status = true;
+            // arr[fromIndex].status = !arr[fromIndex].status;
+            // if (arr[fromIndex] === 1) {
+            //     arr[fromIndex].status = true;
+            //     arr[0].status = false;
+            //     arr[2].status = false;
+            //     this.switcher = fromIndex;
+            // }
+            // else if (arr[fromIndex] === 0) {
+            //     arr[fromIndex].status = true;
+            //     arr[1].status = false;
+            //     arr[2].status = false;
+            //     this.switcher = fromIndex;
+            // }
+            // else if (arr[fromIndex] === 2) {
+            //     arr[fromIndex].status = true;
+            //     arr[0].status = false;
+            //     arr[1].status = false;
+            //     this.switcher = fromIndex;
+            // }
+
+
+            this.switcher = fromIndex;
         }
     },
 

@@ -38,24 +38,26 @@
                     >Send</button>
                 </form>
             </div>
-            <div
-                class="absolute p-4 bg-gradient-to-r from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF] rounded-full bottom-8 right-8"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+            <nuxt-link to="#navbar">
+                <div
+                    class="absolute p-4 bg-gradient-to-r from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF] rounded-full bottom-8 right-8"
                 >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="{2}"
-                        d="M5 15l7-7 7 7"
-                    />
-                </svg>
-            </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="{2}"
+                            d="M5 15l7-7 7 7"
+                        />
+                    </svg>
+                </div>
+            </nuxt-link>
         </div>
         <div class="bg-[#141414] relative flex px-36 py-16 justify-around gap-x-11">
             <div class="flex justify-start my-auto text-white gap-x-11">

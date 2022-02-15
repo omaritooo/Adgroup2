@@ -1,11 +1,12 @@
 <template>
   <div class="bg-white">
-    <Navbar />
+    <Navbar id="navbar" />
     <!-- <Graphics /> -->
     <Innovation />
     <Three />
 
     <Portfolio />
+    <Clients />
     <Footer />
   </div>
 </template>
