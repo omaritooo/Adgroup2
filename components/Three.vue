@@ -10,9 +10,9 @@
                 v-for="(t, index) in three"
                 :key="t.index"
                 :class="{
-                    ' even:translate-x-3/4 even:rotate-30 even:translate-y-56 last:z-50 last:-translate-x-[0%] last:-translate-y-8 last:-rotate-0   ': switcher == 2,
-                    ' even:-translate-x-3/4 even:-rotate-30 even:translate-y-40 first:z-50 first:-translate-x-[0%] first:-translate-y-0 first:-rotate-0   ': switcher == 0,
-                    '': switcher == 1
+                    ' even:translate-x-3/4 even:rotate-30 even:translate-y-56 last:z-50 last:translate-x-0 last:-translate-y-10 last:rotate-0   ': switcher == 2,
+                    ' even:-translate-x-3/4 even:-rotate-30 even:translate-y-40 first:z-50 first:-translate-x-0 first:-translate-y-10 first:rotate-0   ': switcher == 0,
+                    ' ': switcher == 1
                 }"
                 class="absolute w-1/2 transition-all duration-300 ease-in-out top-1/2 left-1/4 first:-translate-x-3/4 last:translate-x-3/4 first:-rotate-30 even:z-30 last:translate-y-56 first:translate-y-40 last:rotate-30 h-1/2"
             >
@@ -26,7 +26,7 @@
                         class="w-[100%] h-[100%] rounded-lg absolute top-0 left-0 z-20"
                     >
                         <div class="flex flex-col py-8 my-auto gap-y-5">
-                            <h1 class="text-3xl text-center text-white top-10">{{ index }}</h1>
+                            <img :src="t.logo" class="w-32 h-32 mx-auto" :alt="t.logo" />
                             <p class="px-10 text-xl font-light text-justify text-white">{{ t.desc }}</p>
                         </div>
                         <button
@@ -58,7 +58,8 @@ export default {
                     img: '/img13.png',
                     color: 'green',
                     desc: 'Imagine your customer checking their new houses while setting at your work office',
-                    status: false
+                    status: false,
+                    logo: 'vreal.png'
                 },
                 {
                     title: 'Vividly',
@@ -66,7 +67,8 @@ export default {
                     color: 'orange',
                     desc: 'Imagine your customer checking their new houses while setting at your work office',
 
-                    status: false
+                    status: false,
+                    logo: 'vividly.svg'
 
                 },
                 {
@@ -75,7 +77,8 @@ export default {
                     color: 'yellow',
                     desc: 'A whole new world and what’s happening inside this world can change our prespective and perception of the reality',
 
-                    status: false
+                    status: false,
+                    logo: 'smarty.svg'
 
                 },
             ],
@@ -141,7 +144,7 @@ export default {
 
 }
 </script>
-<style scoped>
+<style>
 .box {
     width: 100%;
     height: 100%;
