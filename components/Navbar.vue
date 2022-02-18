@@ -1,9 +1,11 @@
 <template>
     <div class="lg:pr-32">
-        <nav class="relative flex flex-wrap justify-around ">
-            <nuxt-link to="/">
-                <img class="w-48 h-48" src="@/assets/ad-logo.svg" />
-            </nuxt-link>
+        <nav class="flex flex-wrap justify-around">
+            <div>
+                <nuxt-link class to="/">
+                    <img class="relative z-50 w-48 h-48" src="/ad-logo.svg" />
+                </nuxt-link>
+            </div>
             <div class="my-auto">
                 <div
                     :class="showMenu ? 'flex opacity-100 transition duration-500' : 'hidden opacity-0'"
@@ -53,27 +55,30 @@
                         </ul>
                     </transition>
                 </div>
-                <button
-                    class="block my-auto text-xl leading-none text-white bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer translate-x-44 h-fit w-fit focus:outline-none"
-                    type="button"
-                >
-                    <button class="relative text-gray-500 focus:outline-none" @click="menu">
-                        <span class="sr-only">Open main menu</span>
-                        <div class="relative mx-auto group w-fit">
-                            <div
-                                :class="showMenu ? 'bg-gradient-to-r from-[#000303] via-[#000000] to-[#000000] text-7xl   -translate-x-5 -translate-y-7' : ''"
-                                class="absolute z-20 p-1 duration-500 transform bg-gradient-to-r from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF] rounded-full text-7xl -bottom-4 -right-2"
-                            ></div>
-                            <div
-                                :class="showMenu ? '' : 'p-1 border-2 border-[#7BD4AF] rounded-full'"
-                            >
+                <div class="my-auto">
+                    <button
+                        class="block my-auto text-xl leading-none text-white bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer translate-x-44 h-fit w-fit focus:outline-none"
+                        type="button"
+                    >
+                        <button class="relative text-gray-500 focus:outline-none" @click="menu">
+                            <span class="sr-only">Open main menu</span>
+                            <div class="relative mx-auto group w-fit">
                                 <div
-                                    class="z-10 p-4 bg-gradient-to-r from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF] rounded-full"
+                                    :class="showMenu ? 'bg-gradient-to-r from-[#000303] via-[#000000] to-[#000000] text-7xl   -translate-x-7 -translate-y-8' : ''"
+                                    class="absolute z-20 p-1 duration-500 transform-gpu bg-gradient-to-r from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF] rounded-full text-7xl -bottom-4 -right-2"
                                 ></div>
+                                <div
+                                    :class="showMenu ? 'p-1 border-2 border-[#7BD4AF] border-opacity-0 rounded-full' : 'p-1 border-2 border-[#7BD4AF] border-opacity-100 rounded-full'"
+                                    class="transition-opacity duration-500 ease-in-out"
+                                >
+                                    <div
+                                        class="z-10 p-4 bg-gradient-to-r transition-opacity ease-in-out duration-500 from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF] rounded-full"
+                                    ></div>
+                                </div>
                             </div>
-                        </div>
+                        </button>
                     </button>
-                </button>
+                </div>
             </div>
         </nav>
     </div>

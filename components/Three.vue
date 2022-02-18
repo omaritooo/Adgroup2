@@ -115,10 +115,7 @@ export default {
                 this.switcher = fromIndex;
 
             }
-            else {
-
-                console.log(arr)
-            }
+           
             // arr[fromIndex].status = true;
             // arr[fromIndex].status = !arr[fromIndex].status;
             // if (arr[fromIndex] === 1) {

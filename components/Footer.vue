@@ -1,5 +1,7 @@
 <template>
-    <div class="flex-col justify-around h-screen pt-48 subpixel-antialiased bg-gray-100 rounded-t-3xl rouded-t-lg">
+    <div
+        class="flex-col justify-around h-screen pt-48 subpixel-antialiased bg-gray-100 rounded-t-3xl rouded-t-lg"
+    >
         <div class="relative flex flex-col justify-center gap-y-6 lg:flex-row pb-36">
             <div class="w-full px-6 my-auto lg:w-1/2">
                 <h1 class="text-4xl font-bold text-center text-gray-900 lg:w-1/2">LET’S GET STARTED</h1>
@@ -64,14 +66,14 @@
                 <div>+20 226309636</div>
                 <div>CARE@ADGROUP.TECH</div>
             </div>
-            <img class="absolute top-6 left-[49%]" src="/adglogo.svg" />
+            <img class="absolute z-50 top-6 left-[49%]" src="/adglogo.svg" />
             <!-- <div class="w-auto mx-auto my-auto"></div> -->
             <div class="flex justify-end my-auto text-white gap-x-3 lg:gap-x-11">
-                <div>Home</div>
-                <div>Portfolio</div>
-                <div>Clients</div>
-                <div>Services</div>
-                <div>Contact</div>
+                <nuxt-link to>Home</nuxt-link>
+                <nuxt-link to="#portfolio">Portfolio</nuxt-link>
+                <nuxt-link to="#clients">Clients</nuxt-link>
+                <nuxt-link to="#services">Services</nuxt-link>
+                <nuxt-link to="#contact">Contact</nuxt-link>
             </div>
         </div>
         <div class="py-10 text-base font-medium text-center text-white bg-black">© COPYRIGHT ADGROUP</div>

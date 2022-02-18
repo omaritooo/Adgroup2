@@ -1,18 +1,22 @@
 <template>
-  <div class="bg-gray-300">
+  <div class="relative">
     <Navbar id="navbar" />
-    <!-- <Graphics /> -->
-    <Innovation />
-    <Three />
+    <Graphics />
+    <Innovation id="about" />
+    <Three id="services" />
 
-    <Portfolio />
+    <Portfolio id="portfolio" />
     <Clients />
-    <Footer  />
+    <Footer id="contact" />
   </div>
 </template>
 
 <script>
-export default {}
+import initThree from '@/mixins/initThree'
+export default {
+  mixins: [initThree]
+
+}
 </script>
 
 <style>
