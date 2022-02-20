@@ -1,14 +1,14 @@
 <template>
     <div class="h-screen max-h-[1080px] w-screen overflow-x-hidden pt-20">
         <div
-            class="flex relative justify-center w-screen py-36 rounded-t-3xl bg-gradient-to-r gap-x-6 from-[#68BF8C] to-[#0CA092]"
+            class="flex relative justify-around w-screen px-[176px] py-36 rounded-t-3xl bg-gradient-to-r from-[#68BF8C] to-[#0CA092]"
         >
-            <div class="flex flex-col w-1/2 mx-auto gap-y-8">
-                <div class="flex mx-auto gap-x-12">
+            <div class="flex flex-col gap-y-8">
+                <div class="flex gap-x-12">
                     <img class="relative z-50 w-52 h-52" src="/vrealvert.svg" alt />
                     <img class="relative z-50 w-52 h-52" src="/adgroupvert.svg" alt />
                 </div>
-                <div class="flex flex-col mx-auto text-2xl font-light text-white gap-y-3">
+                <div class="flex flex-col text-2xl font-light text-white gap-y-3">
                     <div class="flex text-white gap-x-3">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -68,8 +68,8 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col w-1/2 gap-y-5 h-2/3">
-                <form class="flex flex-col mx-auto text-white w-fit gap-y-3">
+            <div class="flex flex-col gap-y-5">
+                <form class="flex flex-col text-white gap-y-3">
                     <input
                         type="text"
                         name
@@ -98,7 +98,7 @@
                         class="w-full p-4 text-2xl text-black placeholder-current bg-white border rounded-b-lg shadow-xl border-opacity-20"
                     >Send</button>
                 </form>
-                <div class="flex justify-center mx-auto gap-x-6">
+                <div class="flex justify-center gap-x-[91px]">
                     <svg
                         width="17"
                         height="28"
@@ -132,13 +132,20 @@
 
                     <svg
                         width="30"
-                        height="22"
-                        viewBox="0 0 30 22"
+                        height="30"
+                        viewBox="0 0 30 30"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
                         <path
-                            d="M28.175 4.025C28.0265 3.43176 27.7241 2.88821 27.2983 2.44926C26.8725 2.0103 26.3384 1.69148 25.75 1.525C23.6 1 15 1 15 1C15 1 6.39998 1 4.24998 1.575C3.66154 1.74148 3.12745 2.0603 2.70167 2.49926C2.27588 2.93821 1.97347 3.48176 1.82498 4.075C1.4315 6.25694 1.23903 8.47039 1.24998 10.6875C1.23596 12.9213 1.42844 15.1516 1.82498 17.35C1.98868 17.9248 2.29787 18.4477 2.72266 18.8681C3.14746 19.2885 3.67351 19.5923 4.24998 19.75C6.39998 20.325 15 20.325 15 20.325C15 20.325 23.6 20.325 25.75 19.75C26.3384 19.5835 26.8725 19.2647 27.2983 18.8257C27.7241 18.3868 28.0265 17.8432 28.175 17.25C28.5654 15.0845 28.7579 12.8879 28.75 10.6875C28.764 8.45369 28.5715 6.22337 28.175 4.025V4.025Z"
+                            d="M28.175 8.025C28.0265 7.43176 27.7241 6.88821 27.2983 6.44926C26.8725 6.0103 26.3384 5.69148 25.75 5.525C23.6 5 15 5 15 5C15 5 6.39998 5 4.24998 5.575C3.66154 5.74148 3.12745 6.0603 2.70167 6.49926C2.27588 6.93821 1.97347 7.48176 1.82498 8.075C1.4315 10.2569 1.23903 12.4704 1.24998 14.6875C1.23596 16.9213 1.42844 19.1516 1.82498 21.35C1.98868 21.9248 2.29787 22.4477 2.72266 22.8681C3.14746 23.2885 3.67351 23.5923 4.24998 23.75C6.39998 24.325 15 24.325 15 24.325C15 24.325 23.6 24.325 25.75 23.75C26.3384 23.5835 26.8725 23.2647 27.2983 22.8257C27.7241 22.3868 28.0265 21.8432 28.175 21.25C28.5654 19.0845 28.7579 16.8879 28.75 14.6875C28.764 12.4537 28.5715 10.2234 28.175 8.025V8.025Z"
+                            stroke="#A3EFCB"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M12.1875 18.7751L19.375 14.6876L12.1875 10.6001V18.7751Z"
                             stroke="#A3EFCB"
                             stroke-width="2"
                             stroke-linecap="round"
