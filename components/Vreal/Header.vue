@@ -1,14 +1,16 @@
 <template>
-    <div class="w-screen max-w-[99.1vw] h-[80vw] overflow-x-hidden">
-        <div class="absolute bg">
+    <div class="w-full relative h-[80vh] overflow-x-hidden">
+        <Navbar class="absolute top-0 z-30" />
+        <div class="absolute top-0 bg">
             <span class="text">The New Revolution of Real estate Technology</span>
         </div>
     </div>
 </template>
 
 <script>
+import Navbar from '../Vreal/Navbar.vue'
 export default {
-
+    components: { Navbar }
 }
 </script>
 

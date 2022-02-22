@@ -12,9 +12,7 @@
 </template>
 
 <script>
-import initThree from '@/mixins/initThree'
 export default {
-  mixins: [initThree]
 
 }
 </script>

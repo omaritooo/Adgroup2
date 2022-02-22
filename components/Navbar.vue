@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:pr-32">
+    <div class="pb-40 lg:pr-32">
         <nav class="flex flex-wrap justify-around">
             <div>
                 <nuxt-link class to="/">
@@ -20,35 +20,35 @@
                             <li class="nav-item">
                                 <nuxt-link to href="#">
                                     <button
-                                        class="w-full px-2 mt-2 ml-auto uppercase md:py-1 md:px-2 active text-md hover:text-white hover-underline-animation"
+                                        class="w-full px-2 mt-2 ml-auto uppercase md:py-1 md:px-2 active text-md hover-underline-animation"
                                     >Home</button>
                                 </nuxt-link>
                             </li>
                             <li class="nav-item">
-                                <nuxt-link to href="#">
+                                <nuxt-link to href="#about">
                                     <button
-                                        class="w-full px-2 mt-2 translate-x-3 ml-auto uppercase -rotate-[30deg] md:py-1 md:px-2 active text-md hover:text-white hover-underline-animation"
+                                        class="w-full px-2 mt-2 translate-x-3 ml-auto uppercase -rotate-[30deg] md:py-1 md:px-2 active text-md e hover-underline-animation"
                                     >About Us</button>
                                 </nuxt-link>
                             </li>
                             <li class="nav-item">
-                                <nuxt-link to href="#">
+                                <nuxt-link to href="#services">
                                     <button
-                                        class="w-full px-2 mt-2 ml-auto uppercase translate-x-10 -rotate-[45deg] md:py-1 md:px-2 active text-md hover:text-white hover-underline-animation"
+                                        class="w-full px-2 mt-2 ml-auto uppercase translate-x-10 -rotate-[45deg] md:py-1 md:px-2 active text-md hover-underline-animation"
                                     >Services</button>
                                 </nuxt-link>
                             </li>
                             <li class="nav-item">
-                                <nuxt-link to href="#">
+                                <nuxt-link to href="#portfolio">
                                     <button
-                                        class="w-full px-2 mt-2 ml-auto uppercase translate-x-20 -rotate-[60deg] md:py-1 md:px-2 active text-md hover:text-white hover-underline-animation"
+                                        class="w-full px-2 mt-2 ml-auto uppercase translate-x-20 -rotate-[60deg] md:py-1 md:px-2 active text-md hover-underline-animation"
                                     >Portfolio</button>
                                 </nuxt-link>
                             </li>
                             <li class="nav-item">
-                                <nuxt-link to href="#">
+                                <nuxt-link to href="#contact">
                                     <button
-                                        class="w-full px-2 mt-2 ml-auto uppercase translate-x-36 -translate-y-10 -rotate-[90deg] md:py-1 md:px-2 active text-md hover:text-white hover-underline-animation"
+                                        class="w-full px-2 mt-2 ml-auto uppercase translate-x-36 -translate-y-10 -rotate-[90deg] md:py-1 md:px-2 active text-md hover-underline-animation"
                                     >Contact</button>
                                 </nuxt-link>
                             </li>
