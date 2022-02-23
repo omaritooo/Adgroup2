@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <Navbar id="navbar" />
-    <!-- <Graphics /> -->
+    <Sample />
     <Innovation id="about" />
     <Three id="services" />
 
@@ -12,8 +12,9 @@
 </template>
 
 <script>
+import Sample from "~/components/Sample.vue";
 export default {
-
+  components: { Sample }
 }
 </script>
 
