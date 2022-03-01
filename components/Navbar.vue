@@ -9,7 +9,7 @@
             <div class="my-auto">
                 <div
                     :class="showMenu ? 'flex opacity-100 transition duration-500' : 'hidden opacity-0'"
-                    class="absolute transition duration-500"
+                    class="absolute z-50 transition duration-500"
                 >
                     <transition name="fade">
                         <ul
@@ -20,28 +20,28 @@
                             <li class="nav-item">
                                 <nuxt-link to href="#">
                                     <button
-                                        class="w-full px-2 mt-2 ml-auto uppercase md:py-1 md:px-2 active text-md hover-underline-animation"
+                                        class="w-full px-2 mt-2 ml-auto text-black uppercase md:py-1 md:px-2 active text-md hover-underline-animation"
                                     >Home</button>
                                 </nuxt-link>
                             </li>
                             <li class="nav-item">
                                 <nuxt-link to href="#about">
                                     <button
-                                        class="w-full px-2 mt-2 translate-x-3 ml-auto uppercase -rotate-[30deg] md:py-1 md:px-2 active text-md e hover-underline-animation"
+                                        class="w-full text-black px-2 mt-2 translate-x-3 ml-auto uppercase -rotate-[30deg] md:py-1 md:px-2 active text-md e hover-underline-animation"
                                     >About Us</button>
                                 </nuxt-link>
                             </li>
                             <li class="nav-item">
                                 <nuxt-link to href="#services">
                                     <button
-                                        class="w-full px-2 mt-2 ml-auto uppercase translate-x-10 -rotate-[45deg] md:py-1 md:px-2 active text-md hover-underline-animation"
+                                        class="w-full px-2 text-black mt-2 ml-auto uppercase translate-x-10 -rotate-[45deg] md:py-1 md:px-2 active text-md hover-underline-animation"
                                     >Services</button>
                                 </nuxt-link>
                             </li>
                             <li class="nav-item">
                                 <nuxt-link to href="#portfolio">
                                     <button
-                                        class="w-full px-2 mt-2 ml-auto uppercase translate-x-20 -rotate-[60deg] md:py-1 md:px-2 active text-md hover-underline-animation"
+                                        class="w-full text-black px-2 mt-2 ml-auto uppercase translate-x-20 -rotate-[60deg] md:py-1 md:px-2 active text-md hover-underline-animation"
                                     >Portfolio</button>
                                 </nuxt-link>
                             </li>
@@ -81,6 +81,8 @@
                 </div>
             </div>
         </nav>
+
+        <CursorFx />
     </div>
 </template>
 
@@ -102,6 +104,7 @@ export default {
 </script>
 
 <style>
+.fade-e
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.5s;
@@ -109,4 +112,3 @@ export default {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
 }
-</style>

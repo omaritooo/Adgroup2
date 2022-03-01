@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <Navbar id="navbar" />
+    <Navbar id="navbar" class="relative z-50" />
     <Sample />
     <Innovation id="about" />
     <Three id="services" />
@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import Sample from "~/components/Sample.vue";
+// import Sample from "~/components/Sample.vue";
 export default {
-  components: { Sample }
+  // components: { Sample }
 }
 </script>
 

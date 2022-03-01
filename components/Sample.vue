@@ -102,7 +102,7 @@ export default {
                 )
                 self.controls.enableDamping = true
                 self.controls.dampingFactor = 0.1
-                self.camera.position.set(0, 1.5, 0)
+                self.camera.position.set(0, 15.5, 0)
                 self.camera.rotation.set(0, 0, 0)
                 // self.controls.target.set(0, 1.5, 0)
                 // self.controls.update()
@@ -137,7 +137,15 @@ export default {
         },
         async createWorld() {
             const self = this
+            const loader = new GLTFLoader();
             // create world
+            // self.loader.load(
+            //     // resource URL
+            //     '/logo.glb',
+            //     // called when the resource is loaded
+            // )
+            // self.scene.add(self.gltf.loader)
+
             self.world = new THREE.Group()
             self.scene.add(self.world)
             self.world.position.set(0, 0, 0)
@@ -165,20 +173,19 @@ export default {
             cube.rotation.set(0, 0, 0)
             cube.castShadow = true
             self.world.add(cube)
-            const loader = new GLTFLoader();
+            self.world.add(loader)
+            loader.load(
+                '/logo.glb',
+                gltf => {
+                    self.gltf.position.set(0, 0, 0)
+                    self.scene.add(gltf.scene)
+                },
+                undefined,
+                undefined
+            )
 
-            loader.load('/logo.glb', function (gltf) {
-
-                // eslint-disable-next-line no-undef
-                scene.add(gltf.scene);
-                // eslint-disable-next-line no-unused-expressions
-                gltf.scene;
-
-            }, undefined, function (error) {
-
-                console.error(error);
-
-            });
+            // self.loader.position.set(0, 0.504, 0)
+            // self.loader.rotation.set(0, 0, 0)
             // dev grid
             // const size = 1000
             // const divisions = 1000

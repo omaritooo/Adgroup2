@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-white rounded-3xl">
-        <div class="flex flex-col h-screen py-12 lg:pl-32 lg:flex-row lg:py-64">
+    <div class="bg-gray-100 rounded-3xl">
+        <div class="flex flex-col h-screen py-12 lg:pl-32 lg:flex-row lg:py-32">
             <div class="flex flex-col w-full mx-auto my-auto text-center lg:mx-0 lg:w-1/3 gap-y-2">
                 <h1 class="text-3xl font-medium lg:text-6xl">Portfolio</h1>
                 <h2 class="text-2xl font-light lg:text-4xl">Previous work and portfolio</h2>
@@ -79,3 +79,4 @@ export default {
     background-size: cover;
     background-image: url("/img13.png");
 }
+</style>
