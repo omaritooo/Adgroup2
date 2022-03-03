@@ -3,7 +3,7 @@
     }" class="max-w-screen">
         <div
             :class="{
-                'w-0': !serv, 'w-screen fixed overflow-y-auto overscroll-contain': serv
+                'w-0': !serv, 'w-screen fixed overflow-y-hidden overscroll-contain': serv
             }"
             class="absolute top-0 z-40 transition-all ease-in-out duration-200 transform h-screen bg-[#2C2C2C]"
         >
@@ -187,8 +187,40 @@
                 class="absolute z-50 top-1/3 right-0 transition-colors duration-150 rounded-l-full rounded-y-full h-[300px] w-[104px]"
                 @click="serv = !serv"
             >
-                <div v-if="!serv" class="text-[24px] text-white -rotate-90">Services</div>
-                <div v-if="serv" class="text-[24px] text-white -rotate-90">close</div>
+                <div v-if="!serv" class="text-[24px] text-white flex gap-x-2 -rotate-90">
+                    Services
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-10 h-10"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="{2}"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M4 6h16M4 12h8m-8 6h16"
+                        />
+                    </svg>
+                </div>
+                <div v-if="serv" class="text-[24px] flex text-white gap-x-2 -rotate-90">
+                    close
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-10 h-10"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="{2}"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                        />
+                    </svg>
+                </div>
             </button>
         </div>
     </div>

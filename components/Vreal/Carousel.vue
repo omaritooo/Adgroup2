@@ -4,8 +4,11 @@
             class="font-[700] mb-[52px] text-center text-[24px] leading-[36px] text-transparent bg-clip-text bg-gradient-to-l from-[#0CA092] to-[#74C38B]"
         >Services</div>
         <client-only>
-            <swiper class="overflow-x-hidden swipe w-" :options="swiperOption">
-                <swiper-slide>
+            <swiper class="h-full overflow-x-hidden swipe" :options="swiperOption">
+                <swiper-slide v-for="inf in services" :key="inf.index">
+                    <img :src="inf.thumbnail_path" class="w-full h-full bg-black rounded-lg" alt />
+                </swiper-slide>
+                <!-- <swiper-slide>
                     <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
                 </swiper-slide>
                 <swiper-slide>
@@ -19,10 +22,7 @@
                 </swiper-slide>
                 <swiper-slide>
                     <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                </swiper-slide>
-                <swiper-slide>
-                    <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                </swiper-slide>
+                </swiper-slide>-->
             </swiper>
         </client-only>
         <div>
@@ -54,15 +54,19 @@ export default {
             swiperOption: {
                 loop: true,
 
-                slidesPerView: 5,
+                slidesPerView: 4,
                 spaceBetween: 20,
                 centeredSlides: false,
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true
                 }
-            }
+            },
+            services: null,
         }
+    },
+    mounted() {
+        this.$axios.get('https://api.modernegy.tech/api/v1/services').then(res => (this.services = res.data.data));
     },
 }
 </script>

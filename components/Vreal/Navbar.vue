@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .hover-underline-animation {
     display: inline-block;
     position: relative;

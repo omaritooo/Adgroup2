@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#202020] max-w-screen overflow-x-hidden">
+    <div class="bg-[#202020] max-w-screen overflow-hidden">
         <Navbar class="relative z-30" />
         <Headly />
         <Portfolio />

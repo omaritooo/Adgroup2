@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen max-h-[1080px] w-screen overflow-x-hidden pt-20">
+    <div class="w-screen pt-20 overflow-x-hidden">
         <div
             class="flex relative justify-around w-screen px-[176px] py-36 rounded-t-3xl bg-gradient-to-r from-[#68BF8C] to-[#0CA092]"
         >

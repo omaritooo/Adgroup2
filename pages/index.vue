@@ -1,7 +1,8 @@
 <template>
   <div class="relative">
-    <Navbar id="navbar" class="relative z-50" />
-    <Sample />
+    <Navbar id="navbar" class />
+    <!-- <Sample /> -->
+    <Test />
     <Innovation id="about" />
     <Three id="services" />
 

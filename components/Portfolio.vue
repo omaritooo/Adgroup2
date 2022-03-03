@@ -1,6 +1,6 @@
 <template>
     <div class="bg-gray-100 rounded-3xl">
-        <div class="flex flex-col h-screen py-12 lg:pl-32 lg:flex-row lg:py-32">
+        <div class="flex flex-col h-screen py-12 lg:pl-32 lg:flex-row lg:py-12">
             <div class="flex flex-col w-full mx-auto my-auto text-center lg:mx-0 lg:w-1/3 gap-y-2">
                 <h1 class="text-3xl font-medium lg:text-6xl">Portfolio</h1>
                 <h2 class="text-2xl font-light lg:text-4xl">Previous work and portfolio</h2>
@@ -8,10 +8,17 @@
                     class="text-xl lg:text-2xl"
                 >Constant improvement for businesses and technologies is what we aim for, by devoting our expertise and hard work into each project we work on.</p>
             </div>
-            <div class="w-full py-2 lg:py-24 lg:ml-auto lg:w-1/2">
+            <div class="w-full py-2 my-auto lg:ml-auto lg:w-1/2">
                 <client-only>
                     <swiper class="swiper" :options="swiperOption">
-                        <swiper-slide>
+                        <swiper-slide v-for="p in ports" :key="p.index">
+                            <img
+                                :src="p.thumbnail_path"
+                                class="w-full h-full bg-black rounded-lg"
+                                alt
+                            />
+                        </swiper-slide>
+                        <!-- <swiper-slide>
                             <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
                         </swiper-slide>
                         <swiper-slide>
@@ -25,10 +32,7 @@
                         </swiper-slide>
                         <swiper-slide>
                             <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                        </swiper-slide>
-                        <swiper-slide>
-                            <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                        </swiper-slide>
+                        </swiper-slide>-->
                     </swiper>
                 </client-only>
             </div>
@@ -55,9 +59,13 @@ export default {
                     el: '.swiper-pagination',
                     clickable: true
                 }
-            }
+            },
+            ports: null
         }
-    }
+    },
+    mounted() {
+        this.$axios.get('https://api.modernegy.tech/api/v1/folios').then(res => (this.ports = res.data.data));
+    },
 }
 </script>
 

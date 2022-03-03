@@ -1,6 +1,6 @@
 <template>
     <div class="pb-40 lg:pr-32">
-        <nav class="flex flex-wrap justify-around">
+        <nav class="relative z-50 flex flex-wrap justify-around">
             <div>
                 <nuxt-link class to="/">
                     <img class="relative z-50 w-48 h-48" src="/ad-logo.svg" />
@@ -15,9 +15,9 @@
                         <ul
                             v-if="showMenu"
                             :class="showMenu ? 'opacity-100 transition duration-500' : 'hidden opacity-0'"
-                            class="flex flex-col text-black list-none transition duration-500 md:gap-y-5 md:gap-x-7"
+                            class="flex flex-col relative z-[100] text-gray-800 list-none transition duration-500 md:gap-y-5 md:gap-x-7"
                         >
-                            <li class="nav-item">
+                            <li class="nav-item z-[100] text-black">
                                 <nuxt-link to href="#">
                                     <button
                                         class="w-full px-2 mt-2 ml-auto text-black uppercase md:py-1 md:px-2 active text-md hover-underline-animation"
@@ -57,7 +57,7 @@
                 </div>
                 <div class="my-auto">
                     <button
-                        class="block my-auto text-xl leading-none text-white bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer translate-x-44 h-fit w-fit focus:outline-none"
+                        class="block my-auto text-xl leading-none text-black bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer translate-x-44 h-fit w-fit focus:outline-none"
                         type="button"
                     >
                         <button class="relative text-gray-500 focus:outline-none" @click="menu">
@@ -104,8 +104,7 @@ export default {
 </script>
 
 <style>
-.fade-e
-.fade-enter-active,
+.fade-e .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.5s;
 }
