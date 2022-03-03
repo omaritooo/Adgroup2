@@ -28,6 +28,7 @@ export default {
             ambientLight: null,
             txt_loader: null,
             gltf_loader: null,
+            modelo: null,
             clock: null,
             enableOrbitControls: true, // dev
         }
@@ -42,7 +43,9 @@ export default {
             })
         }
     },
+
     methods: {
+
         init() {
             const self = this
             // setup
@@ -82,13 +85,13 @@ export default {
                 500
             )
             if (self.enableOrbitControls) {
-                self.camera.position.set(0, 1.5, 0)
+                self.camera.position.set(15, 1.5, 10)
                 self.camera.rotation.set(0, 0, 0)
             } else {
-                self.camera.position.set(0, 0, 0)
+                self.camera.position.set(10, 10, 0)
                 self.cameraHolder = new THREE.Group()
                 self.cameraHolder.add(self.camera)
-                self.cameraHolder.position.set(0, 1.25, 3.5)
+                self.cameraHolder.position.set(10, 1.25, 3.5)
                 self.camera.rotation.set(-0.16, 0, 0)
                 self.scene.add(self.cameraHolder)
                 // self.scene.fog = new THREE.Fog(0x9acae6, 0.0025, 35)
@@ -102,7 +105,7 @@ export default {
                 )
                 self.controls.enableDamping = true
                 self.controls.dampingFactor = 0.1
-                self.camera.position.set(0, 15.5, 0)
+                self.camera.position.set(0, 35.5, 10)
                 self.camera.rotation.set(0, 0, 0)
                 // self.controls.target.set(0, 1.5, 0)
                 // self.controls.update()
@@ -110,6 +113,7 @@ export default {
 
             // create world
             self.createWorld()
+            self.animate()
 
             // add resize listener
             window.addEventListener('resize', self.resize, false)
@@ -151,7 +155,6 @@ export default {
             self.world.position.set(0, 0, 0)
             await self.setupLightShadow()
 
-            // add floor
             const floorGeom = new THREE.PlaneGeometry(2000, 2000)
             floorGeom.rotateX(-Math.PI / 2)
             const color = new THREE.Color(0x5eaa9b)
@@ -166,19 +169,24 @@ export default {
             self.world.add(floorPlane)
 
             // add cube
-            const geometry = new THREE.BoxBufferGeometry(1, 1, 1)
-            const material = new THREE.MeshPhongMaterial({ color: 0x482b75 })
-            const cube = new THREE.Mesh(geometry, material)
-            cube.position.set(0, 0.501, 0)
-            cube.rotation.set(0, 0, 0)
-            cube.castShadow = true
-            self.world.add(cube)
-            self.world.add(loader)
+            // const geometry = new THREE.BoxBufferGeometry(1, 1, 1)
+            // const material = new THREE.MeshPhongMaterial({ color: 0x482b75 })
+            // const cube = new THREE.Mesh(geometry, material)
+            // cube.position.set(0, 0.501, 0)
+            // cube.rotation.set(0, 0, 0)
+            // cube.castShadow = true
+
+            // self.loader.position.set(0, 0.1, 0)
             loader.load(
                 '/logo.glb',
                 gltf => {
-                    self.gltf.position.set(0, 0, 0)
-                    self.scene.add(gltf.scene)
+                    const model = gltf.scene
+                    model.position.set(0, 5, 0)
+                    model.scale.set(0.2, 0.2, 0.2)
+                    // model.rotation.set(new THREE.Vector3(0, 0, Math.PI / 2));
+
+                    // self.gltf.position.set(0, 0.1, 0)
+                    self.scene.add(model)
                 },
                 undefined,
                 undefined
@@ -216,6 +224,9 @@ export default {
 
             // render loop
             self.renderer.setAnimationLoop(self.render.bind(self))
+
+            // self.modelo.rotation.x += 0.01
+
         },
         resize() {
             const self = this
@@ -228,18 +239,27 @@ export default {
                 self.container.clientHeight
             )
         },
+        animate() {
+
+            // this.model.rotation.x += 0.01
+
+        }
     },
 }
 </script>
  
 <style lang="scss" scoped>
-.canvasHolder,
+.canvasHolder {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+}
 .canvas {
     position: absolute;
     top: 0;
     left: 0;
-    width: 40vw;
-    height: 40vh;
+    width: 100vw;
+    height: 80vh;
     pointer-events: all;
     z-index: 1;
 }

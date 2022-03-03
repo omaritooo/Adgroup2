@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <Navbar id="navbar" class />
-    <!-- <Sample /> -->
+    <Sample />
     <!-- <Test /> -->
     <Innovation id="about" />
     <Three id="services" />
