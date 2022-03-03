@@ -3,7 +3,7 @@
     <Header />
     <What />
     <Carousel />
-    <Description />
+    <Description id="why" />
     <Portfolio />
     <Footer />
   </div>

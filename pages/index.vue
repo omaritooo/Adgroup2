@@ -2,7 +2,7 @@
   <div class="relative">
     <Navbar id="navbar" class />
     <!-- <Sample /> -->
-    <Test />
+    <!-- <Test /> -->
     <Innovation id="about" />
     <Three id="services" />
 

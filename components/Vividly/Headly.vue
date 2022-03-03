@@ -3,7 +3,7 @@
     }" class="max-w-screen">
         <div
             :class="{
-                'w-0': !serv, 'w-screen fixed overflow-y-hidden overscroll-contain': serv
+                'w-0': !serv, 'w-screen fixed overflow-hidden overscroll-contain': serv
             }"
             class="absolute top-0 z-40 transition-all ease-in-out duration-200 transform h-screen bg-[#2C2C2C]"
         >
@@ -23,8 +23,8 @@
                         <h1 class="text-[#C19B3F] mr-auto">Request a Demo</h1>
                     </div>
                     <div class="flex flex-col gap-y-[40px] my-auto mx-auto">
-                        <div class="flex flex-col gap-y-[1px] mx-auto">
-                            <div class="flex gap-x-[15px] h-fit">
+                        <div class="flex flex-col gap-y-[1px] mx-auto group">
+                            <div class="flex gap-x-[15px] h-fit group-hover:opacity-25">
                                 <div class="flex gap-x-[13px] -translate-x-10">
                                     <span
                                         class="text-[28px] text-white font-[600] -translate-y-4"
@@ -47,7 +47,9 @@
                                     />
                                 </svg>
                             </div>
-                            <h2 class="text-[60px] text-white font-[600]">Strong Branding</h2>
+                            <h2
+                                class="text-[60px] group-hover:opacity-25 text-white font-[600]"
+                            >Strong Branding</h2>
                         </div>
                         <div class="flex flex-col gap-y-[1px] mx-auto">
                             <div class="flex gap-x-[15px] h-fit">
@@ -236,7 +238,6 @@ export default {
 }
 </script>
 
-<style scoped>
 .lotus {
     background: #c09a3e 0% 0% no-repeat padding-box;
     border-radius: 454px 0px 454px 8px;
@@ -281,6 +282,8 @@ export default {
     /* UI Properties */
     background: #2c2c2c 0% 0% no-repeat padding-box;
     border-radius: 110px 136px 166px 113px;
+    opacity: 1;
+}
     opacity: 1;
 }
 </style>

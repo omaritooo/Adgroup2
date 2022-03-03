@@ -25,25 +25,20 @@
                 </swiper-slide>-->
             </swiper>
         </client-only>
-        <div>
-            <svg
-                class="mx-auto mt-[120px]"
-                width="56"
-                height="88"
-                viewBox="0 0 56 88"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <rect width="56" height="88" rx="28" fill="#EBEBEB" />
-                <path
-                    d="M22 24L28 30L34 24"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                />
-            </svg>
-        </div>
+        <nuxt-link to="#why">
+            <div class="px-4 mx-auto bg-gray-200 rounded-3xl w-fit py-7">
+                <svg
+                    class="w-6 h-6 animate-bounce"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="{2}"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+        </nuxt-link>
     </div>
 </template>
 

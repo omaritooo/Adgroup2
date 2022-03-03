@@ -12,11 +12,13 @@
                 <client-only>
                     <swiper class="swiper" :options="swiperOption">
                         <swiper-slide v-for="p in ports" :key="p.index">
-                            <img
-                                :src="p.thumbnail_path"
-                                class="w-full h-full bg-black rounded-lg"
-                                alt
-                            />
+                            <div @click="$router.push(`/portfolio/${p.id}`)">
+                                <img
+                                    :src="p.thumbnail_path"
+                                    class="w-full h-full bg-black rounded-lg"
+                                    alt
+                                />
+                            </div>
                         </swiper-slide>
                         <!-- <swiper-slide>
                             <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
