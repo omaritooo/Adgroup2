@@ -140,13 +140,15 @@
             </div>
         </div>
 
-        <div class="px-[75px] relative">
-            <p class="text-[153px] text-white leading-[115px] font-[900] max-w-[765px]">
+        <div class="relative flex flex-row ml-20">
+            <p
+                class="lg:text-[100px] 2xl:text-[153px] text-white leading-[115px] font-[900] max-w-[765px]"
+            >
                 TURN YOUR
                 <span class="text-[#C19B3F]">UNIQUE IDEA</span> INTO A
                 <span class="text-[#C19B3F]">UNIQUE PRODUCT</span>
             </p>
-            <div class="absolute top-[6%] left-[48%] blob1">
+            <!-- <div class="absolute top-[6%] left-[48%] blob1">
                 <div
                     data-cursor-hover
                     class="text-[#AAAAAA] text-[24px] -translate-y-20 -rotate-90"
@@ -175,10 +177,10 @@
                     data-cursor-hover
                     class="text-[#AAAAAA] text-[24px] translate-x-40 translate-y-32"
                 >Impressive</div>
-            </div>
-            <div class="absolute z-30 top-[46%] right-72">
+            </div>-->
+            <!-- <div class="absolute z-30 top-[46%] right-72">
                 <img src="/Group 103.svg" alt />
-            </div>
+            </div>-->
             <!-- <div class="flex w-1/6">
                 <div class="h-2 p-1 bg-white rounded-full"></div>
                 <div class="w-full my-auto bg-white border-[1px] border-dashed border-sky-500"></div>
@@ -224,6 +226,9 @@
                     </svg>
                 </div>
             </button>
+            <div>
+                <img src="/Group 104.png" class="relative z-30" alt />
+            </div>
         </div>
     </div>
 </template>

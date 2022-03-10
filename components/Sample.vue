@@ -192,6 +192,8 @@ export default {
                 undefined
             )
 
+
+
             // self.loader.position.set(0, 0.504, 0)
             // self.loader.rotation.set(0, 0, 0)
             // dev grid
@@ -224,7 +226,9 @@ export default {
 
             // render loop
             self.renderer.setAnimationLoop(self.render.bind(self))
-
+            // self.model.rotation.x = +0.02
+            // self.model.rotation.y = +0.02;
+            // self.model.rotation.z = +0.02
             // self.modelo.rotation.x += 0.01
 
         },
@@ -240,8 +244,6 @@ export default {
             )
         },
         animate() {
-
-            // this.model.rotation.x += 0.01
 
         }
     },
