@@ -61,12 +61,16 @@
                 </div>
             </nuxt-link>
         </div>
-        <div class="bg-[#141414] relative flex px-12 lg:px-36 py-16 justify-around gap-x-11">
+        <div
+            class="bg-[#141414] relative flex px-12 xl:px-20 2xl:px-36 py-16 justify-around gap-x-11"
+        >
             <div class="justify-start hidden my-auto text-white lg:flex gap-x-11">
                 <div>+20 226309636</div>
                 <div>CARE@ADGROUP.TECH</div>
             </div>
-            <img class="absolute z-50 top-6 left-[49%]" src="/adglogo.svg" />
+            <div class="mx-auto">
+                <img class="relative z-30 mx-auto" src="/adglogo.svg" />
+            </div>
             <!-- <div class="w-auto mx-auto my-auto"></div> -->
             <div class="flex justify-end my-auto text-white gap-x-3 lg:gap-x-11">
                 <nuxt-link to>Home</nuxt-link>
@@ -76,7 +80,9 @@
                 <nuxt-link to="#contact">Contact</nuxt-link>
             </div>
         </div>
-        <div class="py-10 text-base font-medium text-center text-white bg-black">© COPYRIGHT ADGROUP</div>
+        <div
+            class="py-10 mx-auto text-base font-medium text-center text-white bg-black"
+        >© COPYRIGHT ADGROUP</div>
     </div>
 </template>
 

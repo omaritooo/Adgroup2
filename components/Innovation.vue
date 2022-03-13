@@ -14,7 +14,7 @@
                 >Know more!</button>
             </div>
             <div
-                class="absolute p-4 mx-auto text-white rounded-full bottom-20 left-[45%] flex flex-col gap-y-3"
+                class="absolute p-4 mx-auto text-white rounded-full xl:bottom-6 xl:left-[40%] 2xl:bottom-20 2xl:left-[45%] flex flex-col gap-y-3"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

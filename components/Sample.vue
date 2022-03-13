@@ -9,6 +9,8 @@ import * as THREE from 'three'
 import { Clock } from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+const geometry = new THREE.PlaneGeometry(0.2, 0.5, 0.2);
+
 
 
 
@@ -30,6 +32,7 @@ export default {
             gltf_loader: null,
             modelo: null,
             clock: null,
+            pivot: null,
             enableOrbitControls: true, // dev
         }
     },
@@ -51,7 +54,7 @@ export default {
             // setup
             self.container = self.$refs.canvas
             self.scene = new THREE.Scene()
-            self.scene.background = new THREE.Color(0x9acae6)
+            // self.scene.background = new THREE.Color(0x9acae6)
             self.stagecenter = new THREE.Vector3(0, 0, 0)
             self.lastCameraPos = new THREE.Vector3(0, 0, 0)
 
@@ -86,7 +89,7 @@ export default {
             )
             if (self.enableOrbitControls) {
                 self.camera.position.set(15, 1.5, 10)
-                self.camera.rotation.set(0, 0, 0)
+                self.camera.rotation.set(0, 10, 20)
             } else {
                 self.camera.position.set(10, 10, 0)
                 self.cameraHolder = new THREE.Group()
@@ -99,17 +102,20 @@ export default {
 
             // orbit controls cam
             if (self.enableOrbitControls) {
-                self.controls = new OrbitControls(
-                    self.camera,
-                    self.renderer.domElement
-                )
-                self.controls.enableDamping = true
-                self.controls.dampingFactor = 0.1
-                self.camera.position.set(0, 35.5, 10)
-                self.camera.rotation.set(0, 0, 0)
                 // self.controls.target.set(0, 1.5, 0)
                 // self.controls.update()
             }
+            self.controls = new OrbitControls(
+                self.camera,
+                self.renderer.domElement
+
+            )
+            self.controls.enableZoom = false;
+            self.controls.enableRotate = false;
+            self.controls.enableDamping = true
+            self.controls.dampingFactor = 0.1
+            self.camera.position.set(0, 18.5, 18)
+            self.camera.rotation.set(0, 0, 0)
 
             // create world
             self.createWorld()
@@ -151,7 +157,7 @@ export default {
             // self.scene.add(self.gltf.loader)
 
             self.world = new THREE.Group()
-            self.scene.add(self.world)
+            // self.scene.add(self.world)
             self.world.position.set(0, 0, 0)
             await self.setupLightShadow()
 
@@ -181,8 +187,11 @@ export default {
                 '/logo.glb',
                 gltf => {
                     const model = gltf.scene
-                    model.position.set(0, 5, 0)
-                    model.scale.set(0.2, 0.2, 0.2)
+                    model.position.set(10, 5, 0)
+                    model.rotation.set(-0.65, 0, 0)
+                    model.scale.set(0.3, 0.3, 0.3)
+                    const clone = geometry.clone();
+                    clone.rotateZ(THREE.Math.degToRad(90))
                     // model.rotation.set(new THREE.Vector3(0, 0, Math.PI / 2));
 
                     // self.gltf.position.set(0, 0.1, 0)
