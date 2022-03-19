@@ -3,6 +3,9 @@
         <SmartyNav />
         <SmartHeader />
         <Whatis />
+        <VR />
+        <SmartProjects />
+        <Smartfooter />
     </div>
 </template>
 
@@ -10,8 +13,11 @@
 import SmartHeader from "../components/Smarty/SmartHeader.vue";
 import SmartyNav from "~/components/Smarty/SmartyNav.vue";
 import Whatis from "~/components/Smarty/Whatis.vue";
+import VR from "~/components/Smarty/VR.vue";
+import SmartProjects from "~/components/Smarty/SmartProjects.vue";
+import Smartfooter from "~/components/Smarty/Smartfooter.vue";
 export default {
-    components: { SmartyNav, SmartHeader, Whatis }
+    components: { SmartyNav, SmartHeader, Whatis, VR, SmartProjects, Smartfooter }
 }
 </script>
 

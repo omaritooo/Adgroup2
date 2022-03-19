@@ -81,8 +81,6 @@
                 </div>
             </div>
         </nav>
-
-        <CursorFx />
     </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="w-screen py-[340px] px-[280px]">
+    <div class="w-screen my-20 lg:py-[340px] lg:px-[280px]">
         <div class="flex flex-col text-center gap-y-2">
             <h1
                 class="font-semibold text-[24px] leading-[36px] text-transparent bg-clip-text bg-gradient-to-l from-[#0CA092] to-[#74C38B]"

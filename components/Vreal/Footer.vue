@@ -1,12 +1,12 @@
 <template>
     <div class="w-screen pt-20 overflow-x-hidden">
         <div
-            class="flex relative justify-around w-screen px-[176px] py-36 rounded-t-3xl bg-gradient-to-r from-[#68BF8C] to-[#0CA092]"
+            class="flex relative flex-col lg:flex-row justify-around w- px-4 lg:px-[176px] py-36 rounded-t-3xl bg-gradient-to-r from-[#68BF8C] to-[#0CA092]"
         >
             <div class="flex flex-col gap-y-8">
                 <div class="flex gap-x-12">
-                    <img class="relative z-50 w-52 h-52" src="/vrealvert.svg" alt />
-                    <img class="relative z-50 w-52 h-52" src="/adgroupvert.svg" alt />
+                    <img class="relative z-50 w-20 h-20 lg:w-52 lg:h-52" src="/vrealvert.svg" alt />
+                    <img class="relative z-50 w-20 h-20 lg:w-52 lg:h-52" src="/adgroupvert.svg" alt />
                 </div>
                 <div class="flex flex-col text-2xl font-light text-white gap-y-3">
                     <div class="flex text-white gap-x-3">

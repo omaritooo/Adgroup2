@@ -240,9 +240,23 @@ export default {
             serv: false
         }
     },
+    watch: {
+        serv(val) {
+            if (val) {
+                document
+                    .querySelector('body')
+                    .classList.add('overflow-hidden', 'h-screen', 'w-screen')
+                return
+            }
+
+            document
+                .querySelector('body')
+                .classList.remove('overflow-hidden', 'h-screen', 'w-screen')
+        }
+    },
 }
 </script>
-
+<style scoped>
 .lotus {
     background: #c09a3e 0% 0% no-repeat padding-box;
     border-radius: 454px 0px 454px 8px;
@@ -287,8 +301,6 @@ export default {
     /* UI Properties */
     background: #2c2c2c 0% 0% no-repeat padding-box;
     border-radius: 110px 136px 166px 113px;
-    opacity: 1;
-}
     opacity: 1;
 }
 </style>

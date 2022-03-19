@@ -1,5 +1,5 @@
 <template>
-    <div class="p-10">
+    <div class="relative p-10 overscroll-none">
         <div class="flex justify-between">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@
                 </g>
             </svg>
             <button
-                class="block px-3 text-xl leading-none text-white bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer focus:outline-none"
+                class="block px-3 text-xl z-[60] leading-none text-white bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer focus:outline-none"
                 type="button"
             >
                 <button
@@ -76,6 +76,22 @@
                     </div>
                 </button>
             </button>
+
+            <div
+                :class="showMenu ? 'flex' : 'hidden'"
+                class="fixed inset-0 top-0 left-0 z-50 w-screen h-screen overflow-hidden transition-all duration-150 bg-black"
+            >
+                <div class="container h-screen">
+                    <div
+                        class="flex flex-col gap-y-[5px] h-screen font-extralight w-fit mt-32 my-auto text-white"
+                    >
+                        <div class="text-[80px] h-fit">ABOUT US</div>
+                        <div class="text-[80px]">ABOUT US</div>
+                        <div class="text-[80px]">ABOUT US</div>
+                        <div class="text-[80px]">ABOUT US</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -87,16 +103,31 @@ export default {
             showMenu: false,
         }
     },
+    watch: {
+        // eslint-disable-next-line vue/no-arrow-functions-in-watch
+        showMenu: (val) => {
+            if (val) {
+                document
+                    .querySelector('body')
+                    .classList.add('overflow-hidden', 'h-screen', 'w-screen')
+                return
+            }
+
+            document
+                .querySelector('body')
+                .classList.remove('overflow-hidden', 'h-screen', 'w-screen')
+        }
+    },
     mounted() {
         // eslint-disable-next-line dot-notation
         // this.$refs['home'].focus()
     },
-    method: {
+    methods: {
         meth() { },
         toggleNavbar() {
             this.showMenu = !this.showMenu
         },
-    }
+    },
 }
 </script>
 

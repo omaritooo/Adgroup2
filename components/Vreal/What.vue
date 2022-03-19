@@ -1,6 +1,6 @@
 <template>
     <div class="w-screen">
-        <div class="py-[340px] px-[255px] flex flex-col mx-auto text-center w-fit gap-y-2">
+        <div class="py-[340px] px-4 lg:px-[255px] flex flex-col mx-auto text-center w-fit gap-y-2">
             <h1
                 class="font-semibold text-[24px] leading-[36px] text-transparent bg-clip-text bg-gradient-to-l from-[#0CA092] to-[#74C38B]"
             >What’s VReal?</h1>

@@ -13,11 +13,16 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1280px',
+      'lp': '1440px',
       '2xl': '1536px',
+      'ten': '1920px',
     },
     colors: ({ colors }) => ({
       inherit: colors.inherit,
       current: colors.current,
+      site: {
+        'blue': '#00CFFF'
+      },
       transparent: colors.transparent,
       black: colors.black,
       white: colors.white,
@@ -231,7 +236,18 @@ module.exports = {
       150: '1.5',
       200: '2',
     },
-    container: {},
+    container: {
+      screens:
+      {
+        sm: '375px',
+        lg: '980px',
+        xl: '1249.06px',
+        'lp': '1360px',
+        '2xl': '1480px',
+        'ten': '1780px',
+
+      }
+    },
     content: {
       none: 'none',
     },

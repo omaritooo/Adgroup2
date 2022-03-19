@@ -1,7 +1,9 @@
 <template>
   <div class="relative">
     <Navbar id="navbar" class />
-    <Sample />
+    <!-- <Sample /> -->
+    <!-- <Header /> -->
+    <Accordion />
     <!-- <Test /> -->
     <Innovation id="about" />
     <Three id="services" />
@@ -13,9 +15,10 @@
 </template>
 
 <script>
+import Accordion from "~/components/Accordion.vue";
 // import Sample from "~/components/Sample.vue";
 export default {
-  // components: { Sample }
+  components: { Accordion }
 }
 </script>
 

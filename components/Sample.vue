@@ -8,8 +8,8 @@
 import * as THREE from 'three'
 import { Clock } from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-const geometry = new THREE.PlaneGeometry(0.2, 0.5, 0.2);
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+// const geometry = new THREE.PlaneGeometry(0.2, 0.5, 0.2);
 
 
 
@@ -147,7 +147,7 @@ export default {
         },
         async createWorld() {
             const self = this
-            const loader = new GLTFLoader();
+            // const loader = new GLTFLoader();
             // create world
             // self.loader.load(
             //     // resource URL
@@ -175,31 +175,32 @@ export default {
             self.world.add(floorPlane)
 
             // add cube
-            // const geometry = new THREE.BoxBufferGeometry(1, 1, 1)
-            // const material = new THREE.MeshPhongMaterial({ color: 0x482b75 })
-            // const cube = new THREE.Mesh(geometry, material)
-            // cube.position.set(0, 0.501, 0)
-            // cube.rotation.set(0, 0, 0)
-            // cube.castShadow = true
+            const geometry = new THREE.BoxBufferGeometry(1, 1, 1)
+            const material = new THREE.MeshPhongMaterial({ color: 0xF55FEF })
+            const cube = new THREE.Mesh(geometry, material)
+            cube.position.set(0, 0.501, 0)
+            cube.rotation.set(0, 0, 0)
+            cube.castShadow = true
+            self.scene.add(cube)
 
             // self.loader.position.set(0, 0.1, 0)
-            loader.load(
-                '/logo.glb',
-                gltf => {
-                    const model = gltf.scene
-                    model.position.set(10, 5, 0)
-                    model.rotation.set(-0.65, 0, 0)
-                    model.scale.set(0.3, 0.3, 0.3)
-                    const clone = geometry.clone();
-                    clone.rotateZ(THREE.Math.degToRad(90))
-                    // model.rotation.set(new THREE.Vector3(0, 0, Math.PI / 2));
+            // loader.load(
+            //     '/logo.glb',
+            //     gltf => {
+            //         const model = gltf.scene
+            //         model.position.set(10, 5, 0)
+            //         model.rotation.set(-0.65, 0, 0)
+            //         model.scale.set(0.3, 0.3, 0.3)
+            //         const clone = geometry.clone();
+            //         clone.rotateZ(THREE.Math.degToRad(90))
+            //         // model.rotation.set(new THREE.Vector3(0, 0, Math.PI / 2));
 
-                    // self.gltf.position.set(0, 0.1, 0)
-                    self.scene.add(model)
-                },
-                undefined,
-                undefined
-            )
+            //         // self.gltf.position.set(0, 0.1, 0)
+            //         self.scene.add(model)
+            //     },
+            //     undefined,
+            //     undefined
+            // )
 
 
 
