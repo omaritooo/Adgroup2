@@ -1,40 +1,75 @@
 <template>
-    <div class="h-screen overflow-x-hidden bg-red-300">
+    <div class="h-screen overflow-hidden bg-gray-300">
         <div class="flex">
             <div class="flex h-screen">
                 <div
-                    :class="tester.test1 ? 'w-0 opacity-0' : 'w-full'"
+                    :class="tester.test1 ? 'w-full' : 'w-0 opacity-0'"
                     class="transition-all duration-300 bg-gray-300"
                 >
-                    <div>
-                        <img src="/smarty.svg" />
+                    <div class="flex flex-col p-40 gap-y-5">
+                        <img class="relative z-30 w-20 h-20" src="/smarty.svg" />
+                        <h1>Giving life to your projects</h1>
+                        <div class="text-lg text-black max-w-[700px]">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis cursus fringilla. Suspendisse egestas aliquam malesuada. Suspendisse vitae libero faucibus sapien volutpat auctor ac vitae purus. Vivamus at purus viverra mi dignissim pulvinar efficitur at lacus. Suspendisse laoreet rutrum pretium. Nam eget dapibus tellus, nec accumsan sapien. Sed fermentum magna eget nunc tempor pharetra. Aenean commodo tortor vitae leo efficitur, eget facilisis erat commodo. Vivamus quis elit facilisis, porttitor eros ut, scelerisque nibh. Maecenas semper massa at magna auctor tempus.
+                            Nunc ut leo vitae metus fringilla iaculis sit amet quis ante. Etiam porta sapien in eleifend gravida. Donec blandit lacinia luctus. Maecenas hendrerit pulvinar massa et consectetur. Quisque tincidunt odio at odio porta, eget commodo lacus venenatis. Nullam luctus sagittis turpis, non lobortis nibh. Nullam eget accumsan elit, consectetur porttitor lacus.
+                        </div>
+                        <a>Visit your website</a>
                     </div>
                 </div>
                 <div
-                    class="h-screen my-auto text-center w-fit bg-amber-400"
-                    @click="tester.test1 = !tester.test1"
+                    class="relative z-30 h-full my-auto text-center w-fit bg-amber-400"
+                    @click="toggle1"
                 >
-                    <div class="m-auto text-center rotate-90 text-7xl">Test</div>
+                    <div class="m-auto rotate-90 text-7xl lg:my-72">Test</div>
                 </div>
             </div>
             <div class="flex h-screen">
                 <div
-                    :class="tester.test2 ? 'w-0 opacity-0' : 'w-full'"
-                    class="transition-all duration-300 bg-gray-300"
-                >Test</div>
-                <div class="h-screen w-fit bg-amber-400" @click="tester.test2 = !tester.test2">
-                    <div class="mx-auto my-auto text-center rotate-90 text-7xl">Test</div>
+                    :class="tester.test2 ? 'w-full' : 'w-0 opacity-0'"
+                    class="transition duration-300 bg-gray-300 my-auto-all"
+                >
+                    <div class="flex flex-col p-40 gap-y-5">
+                        <img class="relative z-30 w-20 h-20" src="/smarty.svg" />
+                        <h1>Giving life to your projects</h1>
+                        <div class="text-lg text-black max-w-[700px]">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis cursus fringilla. Suspendisse egestas aliquam malesuada. Suspendisse vitae libero faucibus sapien volutpat auctor ac vitae purus. Vivamus at purus viverra mi dignissim pulvinar efficitur at lacus. Suspendisse laoreet rutrum pretium. Nam eget dapibus tellus, nec accumsan sapien. Sed fermentum magna eget nunc tempor pharetra. Aenean commodo tortor vitae leo efficitur, eget facilisis erat commodo. Vivamus quis elit facilisis, porttitor eros ut, scelerisque nibh. Maecenas semper massa at magna auctor tempus.
+                            Nunc ut leo vitae metus fringilla iaculis sit amet quis ante. Etiam porta sapien in eleifend gravida. Donec blandit lacinia luctus. Maecenas hendrerit pulvinar massa et consectetur. Quisque tincidunt odio at odio porta, eget commodo lacus venenatis. Nullam luctus sagittis turpis, non lobortis nibh. Nullam eget accumsan elit, consectetur porttitor lacus.
+                        </div>
+                        <a>Visit your website</a>
+                    </div>
+                </div>
+                <div class="h-full w-fit bg-amber-400" @click="toggle2">
+                    <div class="mx-auto my-auto text-center rotate-90 text-7xl lg:my-72">Test</div>
                 </div>
             </div>
             <div class="flex h-screen">
                 <div
-                    :class="tester.test3 ? 'w-0 opacity-0' : 'w-full'"
+                    :class="tester.test3 ? 'w-full' : 'w-0 opacity-0'"
                     class="transition-all duration-300 bg-gray-300"
-                >Test</div>
-                <div class="h-screen w-fit bg-amber-400" @click="tester.test3 = !tester.test3">
-                    <div class="w-full mx-auto my-auto text-center rotate-90 text-7xl">
-                        <span class="rotate-90 -transform-y-32">Test</span>
+                >
+                    <div class="flex flex-col p-40 gap-y-5">
+                        <img class="relative z-30 w-20 h-20" src="/smarty.svg" />
+                        <h1>Giving life to your projects</h1>
+                        <div class="text-lg text-black max-w-[700px]">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis cursus fringilla. Suspendisse egestas aliquam malesuada. Suspendisse vitae libero faucibus sapien volutpat auctor ac vitae purus. Vivamus at purus viverra mi dignissim pulvinar efficitur at lacus. Suspendisse laoreet rutrum pretium. Nam eget dapibus tellus, nec accumsan sapien. Sed fermentum magna eget nunc tempor pharetra. Aenean commodo tortor vitae leo efficitur, eget facilisis erat commodo. Vivamus quis elit facilisis, porttitor eros ut, scelerisque nibh. Maecenas semper massa at magna auctor tempus.
+                            Nunc ut leo vitae metus fringilla iaculis sit amet quis ante. Etiam porta sapien in eleifend gravida. Donec blandit lacinia luctus. Maecenas hendrerit pulvinar massa et consectetur. Quisque tincidunt odio at odio porta, eget commodo lacus venenatis. Nullam luctus sagittis turpis, non lobortis nibh. Nullam eget accumsan elit, consectetur porttitor lacus.
+                        </div>
+                        <a>Visit your website</a>
                     </div>
+                </div>
+                <div class="h-full w-fit bg-amber-400" @click="toggle3">
+                    <div class="relative w-full mx-auto my-auto text-center text-7xl">
+                        <div class="rotate-90 lg:my-72">Test</div>
+                    </div>
+                </div>
+            </div>
+            <div
+                :class="tester.test3 || tester.test2 || tester.test1 ? 'w-0 hidden opacity-0' : 'w-full'"
+                class="p-40"
+            >
+                <div class="text-lg text-black max-w-[700px] transition-all duration-150">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis cursus fringilla. Suspendisse egestas aliquam malesuada. Suspendisse vitae libero faucibus sapien volutpat auctor ac vitae purus. Vivamus at purus viverra mi dignissim pulvinar efficitur at lacus. Suspendisse laoreet rutrum pretium. Nam eget dapibus tellus, nec accumsan sapien. Sed fermentum magna eget nunc tempor pharetra. Aenean commodo tortor vitae leo efficitur, eget facilisis erat commodo. Vivamus quis elit facilisis, porttitor eros ut, scelerisque nibh. Maecenas semper massa at magna auctor tempus.
+                    Nunc ut leo vitae metus fringilla iaculis sit amet quis ante. Etiam porta sapien in eleifend gravida. Donec blandit lacinia luctus. Maecenas hendrerit pulvinar massa et consectetur. Quisque tincidunt odio at odio porta, eget commodo lacus venenatis. Nullam luctus sagittis turpis, non lobortis nibh. Nullam eget accumsan elit, consectetur porttitor lacus.
                 </div>
             </div>
         </div>
@@ -47,9 +82,9 @@ export default {
         return {
             tester:
             {
-                test1: true,
-                test2: true,
-                test3: true,
+                test1: false,
+                test2: false,
+                test3: false,
             }
             ,
             items: [
@@ -99,6 +134,23 @@ export default {
                     textTransform: 'uppercase'
                 }
             }
+        }
+    },
+    methods: {
+        toggle1() {
+            this.tester.test1 = !this.tester.test1;
+            this.tester.test2 = false;
+            this.tester.test3 = false;
+        },
+        toggle2() {
+            this.tester.test2 = !this.tester.test2;
+            this.tester.test1 = false;
+            this.tester.test3 = false;
+        },
+        toggle3() {
+            this.tester.test3 = !this.tester.test3;
+            this.tester.test1 = false;
+            this.tester.test2 = false;
         }
     },
 }
