@@ -6,7 +6,13 @@
         <client-only>
             <swiper class="h-full overflow-x-hidden swipe" :options="swiperOption">
                 <swiper-slide v-for="inf in services" :key="inf.index">
-                    <img :src="inf.thumbnail_path" class="w-full h-full bg-black rounded-lg" alt />
+                    <div class="relative z-30" @click="$router.push(`/vreal/services/${inf.id}`)">
+                        <img
+                            :src="inf.thumbnail_path"
+                            class="w-full h-full bg-black rounded-lg"
+                            alt
+                        />
+                    </div>
                 </swiper-slide>
                 <!-- <swiper-slide>
                     <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />

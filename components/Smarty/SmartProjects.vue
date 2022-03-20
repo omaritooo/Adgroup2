@@ -9,7 +9,7 @@
         <div
             class="absolute right-0 hidden lg:flex lg:px-32 bg-[#00CFFF] py-48 top-16 h-[50vh] w-fit"
         >text</div>
-        <div class="relative w-full py-2 mx-auto my-auto lg:w-1/2 lg:ml-auto">
+        <div class="relative w-full py-2 my-auto lg:w-1/2 lg:ml-auto">
             <client-only>
                 <swiper class="wswiper" :options="swiperOption2">
                     <swiper-slide class="w-[419px] h-[583px]">
@@ -35,7 +35,7 @@ export default {
     data() {
         return {
             swiperOption2: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 20,
                 centeredSlides: true,
                 pagination: {
