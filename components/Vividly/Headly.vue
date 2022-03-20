@@ -19,9 +19,9 @@
                     </div>
                 </div>
                 <div class="flex-col flex-1">
-                    <div class="ml-auto">
-                        <h1 class="text-[#C19B3F] mr-auto">Request a Demo</h1>
-                    </div>
+                    <!-- <div class>
+                        <h1 class="text-[#C19B3F] ml-auto">Request a Demo</h1>
+                    </div>-->
                     <div class="flex flex-col gap-y-[40px] my-auto mx-auto">
                         <div class="flex flex-col gap-y-[1px] mx-auto group">
                             <div class="flex gap-x-[15px] h-fit group-hover:opacity-25">
@@ -142,11 +142,11 @@
 
         <div class="relative flex flex-row ml-20">
             <p
-                class="lg:text-[100px] 2xl:text-[153px] text-white leading-[115px] font-[900] max-w-[765px]"
+                class="lg:text-[100px] 2xl:text-[153px] text-white leading-[115px] font-[900] lg:max-w-[550px] 2xl:max-w-[765px]"
             >
                 TURN YOUR
-                <span class="text-[#C19B3F]">UNIQUE IDEA</span> INTO A
-                <span class="text-[#C19B3F]">UNIQUE PRODUCT</span>
+                <span data-cursor-hover class="text-[#C19B3F]">UNIQUE IDEA</span> INTO A
+                <span data-cursor-hover class="text-[#C19B3F]">UNIQUE PRODUCT</span>
             </p>
             <!-- <div class="absolute top-[6%] left-[48%] blob1">
                 <div
@@ -191,7 +191,11 @@
                 class="absolute z-50 top-1/3 right-0 transition-colors duration-150 rounded-l-full rounded-y-full h-[300px] w-[104px]"
                 @click="serv = !serv"
             >
-                <div v-if="!serv" class="text-[24px] text-white flex gap-x-2 -rotate-90">
+                <div
+                    v-if="!serv"
+                    data-cursor-hover
+                    class="text-[24px] text-white flex gap-x-2 -rotate-90"
+                >
                     Services
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +231,7 @@
                 </div>
             </button>
             <div>
-                <img src="/Group 104.png" class="relative z-30" alt />
+                <img src="/Group 104.png" class="relative z-30 2xl:max-w-full lg:max-w-[600px]" alt />
             </div>
         </div>
     </div>
