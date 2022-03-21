@@ -48,7 +48,8 @@ export default {
   plugins: [
     { src: '@/plugins/swiper.js', ssr: 'false' },
     { src: '@/plugins/carousel.js', ssr: 'false' },
-    { src: '@/plugins/cursor.js', ssr: 'false' }
+    { src: '@/plugins/cursor.js', ssr: 'false' },
+    { src: '@/plugins/horizontal.js', ssr: 'false' }
   ],
 
 

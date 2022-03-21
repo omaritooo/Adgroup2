@@ -1,27 +1,29 @@
 <template>
-    <div class="overflow-hidden">
-        <Navbar class="relative z-30 bg-green-500 rounded-xl" />
-        <div class="flex flex-col gap-y-5">
-            <div class="flex flex-wrap mx-auto gap-x-10 gap-y-10">
-                <iframe class="w-screen h-screen mx-auto" :src="folios.video_url"></iframe>
+    <vue-horizontal responsive>
+        <div class>
+            <!-- <Navbar class="relative z-30 bg-green-500 rounded-xl" /> -->
+            <div class="flex gap-y-5">
+                <div class="flex flex-wrap mx-auto gap-x-10 gap-y-10">
+                    <iframe class="w-screen h-screen mx-auto" :src="folios.video_url"></iframe>
+                </div>
+                <div class="flex flex-col mb-20 gap-y-[30px]">
+                    <img class="relative z-30 mx-auto" :src="folios.thumbnail_path" alt />
+                    <!-- {{ folios.image_folios }} -->
+                    <h1 class="mx-auto text-3xl text-center text-bold">{{ folios.title }}</h1>
+                    <p
+                        class="mx-auto max-w-[800px] text-center text-xl text-semibold"
+                    >{{ folios.description }}</p>
+                </div>
             </div>
-            <div class="flex flex-col mb-20 gap-y-[30px]">
-                <img class="relative z-30 mx-auto" :src="folios.thumbnail_path" alt />
-                <!-- {{ folios.image_folios }} -->
-                <h1 class="mx-auto text-3xl text-center text-bold">{{ folios.title }}</h1>
-                <p
-                    class="mx-auto max-w-[800px] text-center text-xl text-semibold"
-                >{{ folios.description }}</p>
-            </div>
+            <Footer />
         </div>
-        <Footer />
-    </div>
+    </vue-horizontal>
 </template>
 
 <script>
-import Navbar from "~/components/Vreal/Navbar.vue";
+// import Navbar from "~/components/Vreal/Navbar.vue";
 export default {
-    components: { Navbar },
+    // components: { Navbar },
     data() {
         return {
             id: this.$route.params.id,

@@ -8,21 +8,41 @@
         </div>
         <div
             class="absolute right-0 hidden lg:flex lg:px-32 bg-[#00CFFF] py-48 top-16 h-[50vh] w-fit"
-        >text</div>
+        ></div>
         <div class="relative w-full py-2 my-auto lg:w-1/2 lg:ml-auto">
             <client-only>
-                <swiper class="wswiper" :options="swiperOption2">
-                    <swiper-slide class="w-[419px] h-[583px]">
-                        <img src="/imgimg.png" class="bg-black rounded-lg object-fit" alt />
+                <swiper
+                    :breakpoints="{
+                        '640': {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        '768': {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        '1024': {
+                            slidesPerView: 4,
+                            spaceBetween: 10
+                        },
+                        '1540': {
+                            slidesPerView: 3,
+                            spaceBetween: 20
+                        }
+                    }"
+                    class="swiper"
+                >
+                    <swiper-slide class="w-[219px] h-[383px]">
+                        <img src="/imgimg.png" class="object-cover bg-black rounded-lg" alt />
                     </swiper-slide>
-                    <swiper-slide class="w-[419px] h-[583px]">
-                        <img src="/imgimg.png" class="bg-black rounded-lg object-fit" alt />
+                    <swiper-slide class="w-[219px] h-[383px]">
+                        <img src="/imgimg.png" class="object-cover bg-black rounded-lg" alt />
                     </swiper-slide>
-                    <swiper-slide class="w-[419px] h-[583px]">
-                        <img src="/imgimg.png" class="bg-black rounded-lg object-fit" alt />
+                    <swiper-slide class="w-[219px] h-[383px]">
+                        <img src="/imgimg.png" class="object-cover bg-black rounded-lg" alt />
                     </swiper-slide>
-                    <swiper-slide class="w-[419px] h-[583px]">
-                        <img src="/imgimg.png" class="bg-black rounded-lg object-fit" alt />
+                    <swiper-slide class="w-[219px] h-[383px]">
+                        <img src="/imgimg.png" class="object-cover bg-black rounded-lg" alt />
                     </swiper-slide>
                 </swiper>
             </client-only>
@@ -35,9 +55,10 @@ export default {
     data() {
         return {
             swiperOption2: {
-                slidesPerView: 3,
-                spaceBetween: 20,
+                spaceBetween: 10,
                 centeredSlides: true,
+                loop: true,
+                autoplay: true,
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true
