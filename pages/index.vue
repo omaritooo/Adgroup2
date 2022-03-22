@@ -7,6 +7,7 @@
     <!-- <Test /> -->
     <Innovation id="about" />
     <Three id="services" />
+    <cursor-fx ref="cursor" outside-size="79px" oclor-hover="#FFFFFF" color="#FFFFFF" disabled />
 
     <Portfolio id="portfolio" />
     <Clients />

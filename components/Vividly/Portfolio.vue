@@ -30,12 +30,24 @@
                 <div
                     class="flex relative z-40 flex-row max-w-[1465px] flex-wrap gap-x-[50px] gap-y-[50px]"
                 >
-                    <img src="/Mask Group 4.png" alt />
-                    <img src="/Mask Group 4.png" alt />
-                    <img src="/Mask Group 4.png" alt />
-                    <img src="/Mask Group 4.png" alt />
-                    <img src="/Mask Group 4.png" alt />
-                    <img src="/Mask Group 4.png" alt />
+                    <nuxt-link to="/vividly/project">
+                        <img src="/Mask Group 4.png" alt />
+                    </nuxt-link>
+                    <nuxt-link to="/vividly/project">
+                        <img src="/Mask Group 4.png" alt />
+                    </nuxt-link>
+                    <nuxt-link to="/vividly/project">
+                        <img src="/Mask Group 4.png" alt />
+                    </nuxt-link>
+                    <nuxt-link to="/vividly/project">
+                        <img src="/Mask Group 4.png" alt />
+                    </nuxt-link>
+                    <nuxt-link to="/vividly/project">
+                        <img src="/Mask Group 4.png" alt />
+                    </nuxt-link>
+                    <nuxt-link to="/vividly/project">
+                        <img src="/Mask Group 4.png" alt />
+                    </nuxt-link>
                 </div>
             </div>
         </div>

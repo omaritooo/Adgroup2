@@ -4,32 +4,37 @@
             class="font-[700] mb-[52px] text-center text-[24px] leading-[36px] text-transparent bg-clip-text bg-gradient-to-l from-[#0CA092] to-[#74C38B]"
         >Services</div>
         <client-only>
-            <swiper class="h-full overflow-x-hidden swipe" :options="swiperOption">
-                <swiper-slide v-for="inf in services" :key="inf.index">
-                    <div class="relative z-30" @click="$router.push(`/vreal/services/${inf.id}`)">
-                        <img
-                            :src="inf.thumbnail_path"
-                            class="w-full h-full bg-black rounded-lg"
-                            alt
-                        />
-                    </div>
-                </swiper-slide>
-                <!-- <swiper-slide>
-                    <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                </swiper-slide>
-                <swiper-slide>
-                    <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                </swiper-slide>
-                <swiper-slide>
-                    <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                </swiper-slide>
-                <swiper-slide>
-                    <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                </swiper-slide>
-                <swiper-slide>
-                    <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                </swiper-slide>-->
-            </swiper>
+            <div>
+                <swiper class="h-full overflow-x-hidden swipe" :options="swiperOption">
+                    <swiper-slide v-for="inf in services" :key="inf.index">
+                        <div
+                            class="relative z-30"
+                            @click="$router.push(`/vreal/services/${inf.id}`)"
+                        >
+                            <img
+                                :src="inf.thumbnail_path"
+                                class="w-full h-full bg-black rounded-lg"
+                                alt
+                            />
+                        </div>
+                    </swiper-slide>
+                    <!-- <swiper-slide>
+                        <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
+                    </swiper-slide>-->
+                </swiper>
+            </div>
         </client-only>
         <nuxt-link to="#why">
             <div class="px-4 mx-auto bg-gray-200 rounded-3xl w-fit py-7">

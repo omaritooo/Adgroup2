@@ -3,7 +3,7 @@
         <div class="flex">
             <div class="flex h-screen">
                 <div
-                    :class="tester.test1 ? 'w-full 2xl:w-[78vw]' : 'w-0 opacity-0'"
+                    :class="tester.test1 ? 'w-full 2xl:w-[87vw]' : 'w-0 opacity-0'"
                     class="transition-all duration-300 bg-gray-300"
                 >
                     <div class="flex flex-col py-40 lg:px-40 2xl:px-72 gap-y-5">
@@ -17,15 +17,15 @@
                     </div>
                 </div>
                 <div
-                    class="relative z-30 h-full my-auto text-center w-fit bg-amber-400"
+                    class="relative z-30 h-full my-auto text-center w-fit bg-[#8FE2F5]"
                     @click="toggle1"
                 >
-                    <div class="m-auto rotate-90 text-7xl lg:my-72">Test</div>
+                    <div class="m-auto text-3xl rotate-90 lg:my-72">Vreal</div>
                 </div>
             </div>
             <div class="flex h-screen">
                 <div
-                    :class="tester.test2 ? 'w-full 2xl:w-[78vw]' : 'w-0 opacity-0'"
+                    :class="tester.test2 ? 'w-full 2xl:w-[87vw]' : 'w-0 opacity-0'"
                     class="transition duration-300 bg-gray-300 my-auto-all"
                 >
                     <div class="flex flex-col lg:p-40 2xl:p-52 gap-y-5">
@@ -38,13 +38,13 @@
                         <a>Visit your website</a>
                     </div>
                 </div>
-                <div class="h-full w-fit bg-amber-400" @click="toggle2">
-                    <div class="mx-auto my-auto text-center rotate-90 text-7xl lg:my-72">Test</div>
+                <div class="h-full w-fit bg-[#B1C1DB]" @click="toggle2">
+                    <div class="mx-auto my-auto text-3xl text-center rotate-90 lg:my-72">Vividly</div>
                 </div>
             </div>
             <div class="flex h-screen">
                 <div
-                    :class="tester.test3 ? 'w-full 2xl:w-[78vw]' : 'w-0 opacity-0'"
+                    :class="tester.test3 ? 'w-full 2xl:w-[87vw]' : 'w-0 opacity-0'"
                     class="transition-all duration-300 bg-gray-300"
                 >
                     <div class="flex flex-col lg:p-40 2xl:p-52 gap-y-5">
@@ -57,9 +57,9 @@
                         <a>Visit your website</a>
                     </div>
                 </div>
-                <div class="h-full w-fit bg-amber-400" @click="toggle3">
-                    <div class="relative w-full mx-auto my-auto text-center text-7xl">
-                        <div class="rotate-90 lg:my-72">Test</div>
+                <div class="h-full w-fit bg-[#B5DAC7]" @click="toggle3">
+                    <div class="relative w-full mx-auto my-auto text-3xl text-center">
+                        <div class="rotate-90 lg:my-72">Smarty</div>
                     </div>
                 </div>
             </div>

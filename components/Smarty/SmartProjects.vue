@@ -1,6 +1,6 @@
 <template>
     <div class="relative flex flex-col justify-around py-32 overflow-x-hidden lg:flex-row">
-        <div class="mx-auto my-auto text-white lg:mx-0 lg:ml-10">
+        <div class="mx-auto my-auto text-white lg:mx-0 lg:ml-10 2xl:ml-16">
             <h1 class="text-[32px] font-[700]">Latest Projects</h1>
             <p
                 class="max-w-[400px] text-[24px]"
@@ -13,36 +13,35 @@
             <client-only>
                 <swiper
                     :breakpoints="{
-                        '640': {
-                            slidesPerView: 2,
-                            spaceBetween: 20
-                        },
-                        '768': {
-                            slidesPerView: 2,
-                            spaceBetween: 20
-                        },
-                        '1024': {
-                            slidesPerView: 4,
-                            spaceBetween: 10
-                        },
-                        '1540': {
-                            slidesPerView: 3,
-                            spaceBetween: 20
-                        }
+                    
                     }"
                     class="swiper"
+                    :options="swiperOption2"
                 >
-                    <swiper-slide class="w-[219px] h-[383px]">
-                        <img src="/imgimg.png" class="object-cover bg-black rounded-lg" alt />
+                    <swiper-slide class>
+                        <nuxt-link to="/smarty/project">
+                            <img src="/imgimg.png" class="object-cover bg-black rounded-lg" alt />
+                        </nuxt-link>
                     </swiper-slide>
-                    <swiper-slide class="w-[219px] h-[383px]">
-                        <img src="/imgimg.png" class="object-cover bg-black rounded-lg" alt />
+                    <swiper-slide class>
+                        <nuxt-link to="/smarty/project">
+                            <img src="/imgimg.png" class="object-cover bg-black rounded-lg" alt />
+                        </nuxt-link>
                     </swiper-slide>
-                    <swiper-slide class="w-[219px] h-[383px]">
-                        <img src="/imgimg.png" class="object-cover bg-black rounded-lg" alt />
+                    <swiper-slide class>
+                        <nuxt-link to="/smarty/project">
+                            <img src="/imgimg.png" class="object-cover bg-black rounded-lg" alt />
+                        </nuxt-link>
                     </swiper-slide>
-                    <swiper-slide class="w-[219px] h-[383px]">
-                        <img src="/imgimg.png" class="object-cover bg-black rounded-lg" alt />
+                    <swiper-slide class>
+                        <nuxt-link to="/smarty/project">
+                            <img src="/imgimg.png" class="object-cover bg-black rounded-lg" alt />
+                        </nuxt-link>
+                    </swiper-slide>
+                    <swiper-slide class>
+                        <nuxt-link to="/smarty/project">
+                            <img src="/imgimg.png" class="object-cover bg-black rounded-lg" alt />
+                        </nuxt-link>
                     </swiper-slide>
                 </swiper>
             </client-only>
@@ -55,7 +54,24 @@ export default {
     data() {
         return {
             swiperOption2: {
-                spaceBetween: 10,
+                breakpoints: {
+                    '640': {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    '768': {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    '1024': {
+                        slidesPerView: 2,
+                        spaceBetween: 40
+                    },
+                    '1540': {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    }
+                },
                 centeredSlides: true,
                 loop: true,
                 autoplay: true,

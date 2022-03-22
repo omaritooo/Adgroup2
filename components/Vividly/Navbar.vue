@@ -1,8 +1,8 @@
 <template>
-    <div class="px-[75px] py-[64px]">
+    <div class="mx-auto container py-[64px]">
         <nav class="flex justify-between">
             <nuxt-link data-cursor-hover to>
-                <img src="/Group 102.png" alt />
+                <img class="relative z-30" src="/Group 102.png" alt />
             </nuxt-link>
             <div
                 data-cursor-hover
