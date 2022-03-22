@@ -2,6 +2,7 @@
     <div class="bg-[#202020] max-w-screen overflow-hidden">
         <Navbar class="relative z-30" />
         <Headly />
+        <Returner />
         <Portfolio />
         <Stories />
         <cursor-fx ref="cursor" outside-size="79px" oclor-hover="#FFFFFF" color="#FFFFFF" disabled />
@@ -15,8 +16,9 @@ import Stories from "~/components/Vividly/Stories.vue"
 import Navbar from "~/components/Vividly/Navbar.vue";
 import Headly from "~/components/Vividly/Headly.vue";
 import Footly from "~/components/Vividly/Footly.vue";
+import Returner from "~/components/Returner.vue";
 export default {
-    components: { Navbar, Headly, Portfolio, Stories, Footly },
+    components: { Navbar, Headly, Portfolio, Stories, Footly, Returner },
     mounted() {
         this.$refs.cursor.start()
     },

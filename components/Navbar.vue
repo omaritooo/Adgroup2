@@ -64,17 +64,14 @@
                             <span class="sr-only">Open main menu</span>
                             <div class="relative mx-auto group w-fit">
                                 <div
-                                    :class="showMenu ? 'bg-gradient-to-r from-[#000303] via-[#000000] to-[#000000] text-7xl   -translate-x-7 -translate-y-8' : ''"
-                                    class="absolute z-20 p-1 duration-500 transform-gpu bg-gradient-to-r from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF] rounded-full text-7xl -bottom-4 -right-2"
+                                    :class="showMenu ? 'bg-gradient-to-r  from-[#000303] via-[#000000] to-[#000000] text-7xl   -translate-x-2 -translate-y-2' : ''"
+                                    class="absolute z-20 p-1 duration-500 transform-gpu bg-gradient-to-r from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF] rounded-full text-7xl -bottom-8 -right-8"
                                 ></div>
-                                <div
-                                    :class="showMenu ? 'p-1 border-2 border-[#7BD4AF] border-opacity-0 rounded-full' : 'p-1 border-2 border-[#7BD4AF] border-opacity-100 rounded-full'"
+                                <!-- <div
+                                    :class="showMenu ? 'p-1 border-2  border-[#7BD4AF] border-opacity-0 rounded-full  z-10 p-4 bg-gradient-to-r transition-opacity ease-in-out duration-500 from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF] rounded-full  ' : 'pulsating-circle p-1 border-2 border-[#7BD4AF] border-opacity-100 rounded-full'"
                                     class="transition-opacity duration-500 ease-in-out"
-                                >
-                                    <div
-                                        class="z-10 p-4 bg-gradient-to-r transition-opacity ease-in-out duration-500 from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF] rounded-full"
-                                    ></div>
-                                </div>
+                                ></div>-->
+                                <div :class="showMenu ? '   static-ring ' : 'pulsating-circle'"></div>
                             </div>
                         </button>
                     </button>
@@ -101,7 +98,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .fade-e .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.5s;
@@ -109,3 +106,112 @@ export default {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
 }
+
+.static-ring {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    width: 40px;
+    height: 40px;
+    @apply bg-gradient-to-r;
+    @apply from-[#00BDD6];
+    @apply via-[#33C6C6];
+    @apply to-[#7BD4AF];
+    border-radius: 50px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+
+    &:before {
+        content: "";
+        position: relative;
+        display: block;
+
+        box-sizing: border-box;
+
+        background-color: #01a4e9;
+        animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) linear;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        @apply bg-gradient-to-r;
+        @apply from-[#00BDD6];
+        @apply via-[#33C6C6];
+        @apply to-[#7BD4AF];
+        border-radius: 50px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s
+            linear;
+    }
+}
+.pulsating-circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 40px;
+    height: 40px;
+
+    &:before {
+        content: "";
+        position: relative;
+        display: block;
+        width: 300%;
+        height: 300%;
+        box-sizing: border-box;
+        margin-left: -100%;
+        margin-top: -100%;
+        border-radius: 95px;
+        background-color: #01a4e9;
+        animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        @apply bg-gradient-to-r;
+        @apply from-[#00BDD6];
+        @apply via-[#33C6C6];
+        @apply to-[#7BD4AF];
+        border-radius: 50px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s
+            infinite;
+    }
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.33);
+    }
+    80%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes pulse-dot {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+</style>
+

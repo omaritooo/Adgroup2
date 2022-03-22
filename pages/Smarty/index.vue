@@ -2,6 +2,7 @@
     <div class="bg-[#222222]">
         <SmartyNav />
         <SmartHeader />
+        <Returner />
         <Whatis />
         <VR />
         <SmartProjects />
@@ -17,8 +18,9 @@ import Whatis from "~/components/Smarty/Whatis.vue";
 import VR from "~/components/Smarty/VR.vue";
 import SmartProjects from "~/components/Smarty/SmartProjects.vue";
 import Smartfooter from "~/components/Smarty/Smartfooter.vue";
+import Returner from "~/components/Returner.vue";
 export default {
-    components: { SmartyNav, Whatis, SmartHeader, VR, SmartProjects, Smartfooter }
+    components: { SmartyNav, Whatis, SmartHeader, VR, SmartProjects, Smartfooter, Returner }
 }
 </script>
 
