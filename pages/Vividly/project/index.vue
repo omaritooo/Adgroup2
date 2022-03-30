@@ -1,6 +1,8 @@
 <template>
     <div class="bg-[#202020]">
         <Navbar />
+        <cursor-fx ref="cursor" outside-size="79px" oclor-hover="#FFFFFF" color="#FFFFFF" disabled />
+
         <div class="container flex justify-between mx-auto my-auto">
             <div class="my-auto">
                 <h1 class="text-white text-[36px]">#uiux / #appdesign /#appdevelopment</h1>
@@ -16,7 +18,7 @@
                 <img src="/Mask Group 19.png" alt />
             </div>
         </div>
-        <div class="container flex mx-auto mt-20">
+        <div class="container flex mx-auto my-20">
             <div class="my-auto">
                 <h1 class="text-[40px] text-white">About the projct</h1>
                 <p
@@ -57,7 +59,10 @@
 import Navbar from '~/components/Vividly/Navbar.vue'
 import Footly from '~/components/Vividly/Footly.vue'
 export default {
-    components: { Navbar, Footly }
+    components: { Navbar, Footly },
+    mounted() {
+        this.$refs.cursor.start()
+    },
 }
 </script>
 

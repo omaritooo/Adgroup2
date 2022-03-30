@@ -1,6 +1,8 @@
 <template>
     <div class="bg-[#222222]">
         <SmartyNav />
+        <cursor-fx ref="cursor" outside-size="79px" oclor-hover="#FFFFFF" color="#FFFFFF" disabled />
+
         <SmartHeader />
         <Returner />
         <Whatis />
@@ -21,6 +23,9 @@ import Smartfooter from "~/components/Smarty/Smartfooter.vue";
 import Returner from "~/components/Returner.vue";
 export default {
     components: { SmartyNav, Whatis, SmartHeader, VR, SmartProjects, Smartfooter, Returner }
+    , mounted() {
+        this.$refs.cursor.start()
+    },
 }
 </script>
 

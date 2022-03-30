@@ -1,10 +1,16 @@
 <template>
-    <div class="w-[5720px] h-[98vh] overflow-y-hidden bg-[#E5E5E5]">
+    <div class="lg:w-[4300px] 2xl:w-[5720px] h-[98vh] overflow-y-hidden bg-[#E5E5E5]">
         <!-- <Navbar class="relative z-30 bg-green-500 rounded-xl" /> -->
+        <cursor-fx ref="cursor" outside-size="79px" oclor-hover="#000000" color="#23A491" />
+
         <div class="flex gap-y-5">
-            <div class="flex flex-wrap gap-x-10 gap-y-10">
-                <iframe class="w-screen h-[98vh] rounded-3xl" :src="folios.video_url"></iframe>
+            <div class="relative flex flex-wrap gap-x-10 gap-y-10">
+                <iframe class="w-[95vw] h-[99vh] rounded-lg" :src="folios.video_url"></iframe>
+                <div
+                    class="absolute px-6 py-4 my-auto rounded-3xl text-white bg-gradient-to-r from-[#0CA092] to-[#74C38B] right-4 top-1/2"
+                >More ></div>
             </div>
+
             <div class="flex flex-col mb-20 gap-y-[30px] w-fit h-screen">
                 <!-- <div class=""><img class="relative z-30" :src="folios.thumbnail_path" alt /></div> -->
                 <!-- {{ folios.image_folios }} -->
@@ -19,7 +25,7 @@
                     >Request a Demo</button>
                 </div>
             </div>
-            <div class="flex w-screen h-screen px-10 bg-white gap-x-10 test">
+            <div class="flex h-screen px-20 bg-white w-fit gap-x-10 test">
                 <h1 class="my-auto text-[24px] max-w-[142px]">Services Gallery</h1>
 
                 <div class="flex my-auto gap-x-4">

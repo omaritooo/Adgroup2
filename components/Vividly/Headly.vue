@@ -51,7 +51,137 @@
                                 class="text-[60px] group-hover:opacity-25 text-white font-[600]"
                             >Strong Branding</h2>
                         </div>
-                        <div class="flex flex-col gap-y-[1px] mx-auto">
+                        <nuxt-link to="/service" class="flex flex-col gap-y-[1px] mx-auto">
+                            <div class="flex gap-x-[15px] h-fit">
+                                <div class="flex gap-x-[13px] -translate-x-10">
+                                    <span
+                                        class="text-[28px] text-white font-[600] -translate-y-4"
+                                    >01</span>
+                                    <h1 class="font-normal text-white text-[33px]">Endless Ideas</h1>
+                                </div>
+                                <svg
+                                    class="my-auto"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        id="Subtraction_7"
+                                        data-name="Subtraction 7"
+                                        d="M-1325,27a7.947,7.947,0,0,1-5.657-2.343A7.948,7.948,0,0,1-1333,19a8.009,8.009,0,0,0,8-8,7.947,7.947,0,0,1,5.657,2.343A7.947,7.947,0,0,1-1317,19a7.948,7.948,0,0,1-2.343,5.657A7.947,7.947,0,0,1-1325,27Z"
+                                        transform="translate(1333 -11)"
+                                        fill="#b18f3c"
+                                    />
+                                </svg>
+                            </div>
+                            <h2 class="text-[60px] text-white font-[600]">Strong Branding</h2>
+                        </nuxt-link>
+                        <nuxt-link to="/service" class="flex flex-col gap-y-[1px] mx-auto">
+                            <div class="flex gap-x-[15px] h-fit">
+                                <div class="flex gap-x-[13px] -translate-x-10">
+                                    <span
+                                        class="text-[28px] text-white font-[600] -translate-y-4"
+                                    >01</span>
+                                    <h1 class="font-normal text-white text-[33px]">Endless Ideas</h1>
+                                </div>
+                                <svg
+                                    class="my-auto"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        id="Subtraction_7"
+                                        data-name="Subtraction 7"
+                                        d="M-1325,27a7.947,7.947,0,0,1-5.657-2.343A7.948,7.948,0,0,1-1333,19a8.009,8.009,0,0,0,8-8,7.947,7.947,0,0,1,5.657,2.343A7.947,7.947,0,0,1-1317,19a7.948,7.948,0,0,1-2.343,5.657A7.947,7.947,0,0,1-1325,27Z"
+                                        transform="translate(1333 -11)"
+                                        fill="#b18f3c"
+                                    />
+                                </svg>
+                            </div>
+                            <h2 class="text-[60px] text-white font-[600]">Strong Branding</h2>
+                        </nuxt-link>
+                        <nuxt-link to="/service" class="flex flex-col gap-y-[1px] mx-auto">
+                            <div class="flex gap-x-[15px] h-fit">
+                                <div class="flex gap-x-[13px] -translate-x-10">
+                                    <span
+                                        class="text-[28px] text-white font-[600] -translate-y-4"
+                                    >01</span>
+                                    <h1 class="font-normal text-white text-[33px]">Endless Ideas</h1>
+                                </div>
+                                <svg
+                                    class="my-auto"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        id="Subtraction_7"
+                                        data-name="Subtraction 7"
+                                        d="M-1325,27a7.947,7.947,0,0,1-5.657-2.343A7.948,7.948,0,0,1-1333,19a8.009,8.009,0,0,0,8-8,7.947,7.947,0,0,1,5.657,2.343A7.947,7.947,0,0,1-1317,19a7.948,7.948,0,0,1-2.343,5.657A7.947,7.947,0,0,1-1325,27Z"
+                                        transform="translate(1333 -11)"
+                                        fill="#b18f3c"
+                                    />
+                                </svg>
+                            </div>
+                            <h2 class="text-[60px] text-white font-[600]">Strong Branding</h2>
+                        </nuxt-link>
+                        <nuxt-link to="/service" class="flex flex-col gap-y-[1px] mx-auto">
+                            <div class="flex gap-x-[15px] h-fit">
+                                <div class="flex gap-x-[13px] -translate-x-10">
+                                    <span
+                                        class="text-[28px] text-white font-[600] -translate-y-4"
+                                    >01</span>
+                                    <h1 class="font-normal text-white text-[33px]">Endless Ideas</h1>
+                                </div>
+                                <svg
+                                    class="my-auto"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        id="Subtraction_7"
+                                        data-name="Subtraction 7"
+                                        d="M-1325,27a7.947,7.947,0,0,1-5.657-2.343A7.948,7.948,0,0,1-1333,19a8.009,8.009,0,0,0,8-8,7.947,7.947,0,0,1,5.657,2.343A7.947,7.947,0,0,1-1317,19a7.948,7.948,0,0,1-2.343,5.657A7.947,7.947,0,0,1-1325,27Z"
+                                        transform="translate(1333 -11)"
+                                        fill="#b18f3c"
+                                    />
+                                </svg>
+                            </div>
+                            <h2 class="text-[60px] text-white font-[600]">Strong Branding</h2>
+                        </nuxt-link>
+                        <!-- <nuxt-link to="/service" class="flex flex-col gap-y-[1px] mx-auto">
+                            <div class="flex gap-x-[15px] h-fit">
+                                <div class="flex gap-x-[13px] -translate-x-10">
+                                    <span
+                                        class="text-[28px] text-white font-[600] -translate-y-4"
+                                    >01</span>
+                                    <h1 class="font-normal text-white text-[33px]">Endless Ideas</h1>
+                                </div>
+                                <svg
+                                    class="my-auto"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        id="Subtraction_7"
+                                        data-name="Subtraction 7"
+                                        d="M-1325,27a7.947,7.947,0,0,1-5.657-2.343A7.948,7.948,0,0,1-1333,19a8.009,8.009,0,0,0,8-8,7.947,7.947,0,0,1,5.657,2.343A7.947,7.947,0,0,1-1317,19a7.948,7.948,0,0,1-2.343,5.657A7.947,7.947,0,0,1-1325,27Z"
+                                        transform="translate(1333 -11)"
+                                        fill="#b18f3c"
+                                    />
+                                </svg>
+                            </div>
+                            <h2 class="text-[60px] text-white font-[600]">Strong Branding</h2>
+                        </nuxt-link>-->
+                        <!-- <div class="flex flex-col gap-y-[1px] mx-auto">
                             <div class="flex gap-x-[15px] h-fit">
                                 <div class="flex gap-x-[13px] -translate-x-10">
                                     <span
@@ -102,33 +232,7 @@
                                 </svg>
                             </div>
                             <h2 class="text-[60px] text-white font-[600]">Strong Branding</h2>
-                        </div>
-                        <div class="flex flex-col gap-y-[1px] mx-auto">
-                            <div class="flex gap-x-[15px] h-fit">
-                                <div class="flex gap-x-[13px] -translate-x-10">
-                                    <span
-                                        class="text-[28px] text-white font-[600] -translate-y-4"
-                                    >01</span>
-                                    <h1 class="font-normal text-white text-[33px]">Endless Ideas</h1>
-                                </div>
-                                <svg
-                                    class="my-auto"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                >
-                                    <path
-                                        id="Subtraction_7"
-                                        data-name="Subtraction 7"
-                                        d="M-1325,27a7.947,7.947,0,0,1-5.657-2.343A7.948,7.948,0,0,1-1333,19a8.009,8.009,0,0,0,8-8,7.947,7.947,0,0,1,5.657,2.343A7.947,7.947,0,0,1-1317,19a7.948,7.948,0,0,1-2.343,5.657A7.947,7.947,0,0,1-1325,27Z"
-                                        transform="translate(1333 -11)"
-                                        fill="#b18f3c"
-                                    />
-                                </svg>
-                            </div>
-                            <h2 class="text-[60px] text-white font-[600]">Strong Branding</h2>
-                        </div>
+                        </div>-->
 
                         <!-- <h1 class="text-[45px]">Strong Branding</h1>
                         <h1 class="text-[45px]">Strong Branding</h1>
@@ -188,13 +292,13 @@
             </div>-->
             <button
                 :class="{ 'bg-[#202020] ': serv, 'bg-[#2C2C2C]': !serv }"
-                class="absolute z-50 top-1/3 right-0 transition-colors duration-150 rounded-l-full rounded-y-full h-[300px] w-[104px]"
+                class="absolute z-50 -top-72 -right-[128vw] transition-colors items-start align-top duration-150 rounded-l-full rounded-full h-[1080px] w-[1920px]"
                 @click="serv = !serv"
             >
                 <div
                     v-if="!serv"
                     data-cursor-hover
-                    class="text-[24px] text-white flex gap-x-2 -rotate-90"
+                    class="text-[24px] text-white absolute -left-4 flex gap-x-2 align-top -rotate-90"
                 >
                     Services
                     <svg
@@ -212,7 +316,11 @@
                         />
                     </svg>
                 </div>
-                <div v-if="serv" class="text-[24px] flex text-white gap-x-2 -rotate-90">
+                <div
+                    v-if="serv"
+                    data-cursor-hover
+                    class="text-[24px] text-white absolute -left-4 flex gap-x-2 align-top -rotate-90"
+                >
                     close
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -230,8 +338,19 @@
                     </svg>
                 </div>
             </button>
-            <div>
-                <img src="/Group 104.png" class="relative z-30 2xl:max-w-full lg:max-w-[600px]" alt />
+            <div class="relative">
+                <!-- <img src="/Group 104.png" class="relative z-30 2xl:max-w-full lg:max-w-[600px]" alt /> -->
+                <div class="absolute top-0 left-0 z-30 group">
+                    <div
+                        class="absolute top-0 w-[349px] h-[349px] scale-110 z-30 group-hover:scale-125"
+                    >
+                        <img src="/blob1.png" class="relative z-40 object-cover" />
+                    </div>
+                    <!-- <div class="relative z-20 blob1"></div> -->
+
+                    <div class="absolute z-20 group-hover:scale-x-105 top-2 -left-2 blob1r"></div>
+                    <div class="absolute z-20 text-white text-[24px] -right-4 top-1/2">Unique</div>
+                </div>
             </div>
         </div>
     </div>
@@ -275,7 +394,30 @@ export default {
     background: #2c2c2c 0% 0% no-repeat padding-box;
     border-radius: 110px 136px 166px 113px;
     opacity: 1;
+    /* border: 1px solid rgba(255, 255, 255, 0.452); */
+    transition: transform 0.4s, height 0.4s;
 }
+
+.blob1:hover {
+    width: 329px;
+    height: 329px;
+    transform: scale(1.1);
+    /* UI Properties */
+    background: #2c2c2c 0% 0% no-repeat padding-box;
+    border-radius: 110px 136px 166px 113px;
+    opacity: 1;
+}
+.blob1r {
+    width: 329px;
+    height: 329px;
+    transform: matrix(0.07, 1, -1, 0.07, 0, 0);
+    /* UI Properties */
+    background: transparent 0% 0% no-repeat padding-box;
+    border-radius: 110px 136px 166px 113px;
+    opacity: 1;
+    border: 1px solid rgba(255, 255, 255, 0.452);
+}
+
 .blob2 {
     width: 225px;
     height: 225px;

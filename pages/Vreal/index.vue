@@ -3,6 +3,8 @@
     <Header />
     <Returner />
     <What />
+    <cursor-fx ref="cursor" outside-size="79px" oclor-hover="#000000" color="#000000" />
+
     <Carousel />
     <Description id="why" />
 

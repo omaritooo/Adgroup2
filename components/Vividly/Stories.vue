@@ -896,7 +896,7 @@
                             <div class="text-white leading-[37px] text-[20px]">Client</div>
                         </div>
                     </swiper-slide>
-                    <div slot="pagination" class="swiper-pagination"></div>
+                    <!-- <div slot="pagination" class="swiper-pagination"></div> -->
                 </swiper>
             </client-only>
         </div>
@@ -918,6 +918,24 @@ export default {
                 slidesPerView: 2.5,
                 spaceBetween: 50,
                 centeredSlides: false,
+                breakpoints: {
+                    '640': {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    '768': {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    '1024': {
+                        slidesPerView: 2,
+                        spaceBetween: 40
+                    },
+                    '1540': {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    }
+                },
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true

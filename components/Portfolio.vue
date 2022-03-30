@@ -1,11 +1,11 @@
 <template>
     <div class="bg-gray-100 rounded-3xl">
-        <div class="flex flex-col h-screen py-12 lg:pl-32 lg:flex-row lg:my-12">
+        <div class="flex flex-col h-screen py-12 lg:pl-20 lg:flex-row lg:my-12">
             <div class="flex flex-col w-full mx-auto my-auto text-center lg:mx-0 lg:w-1/3 gap-y-2">
-                <h1 class="text-3xl font-medium lg:text-6xl">Portfolio</h1>
-                <h2 class="text-2xl font-light lg:text-4xl">Previous work and portfolio</h2>
+                <h1 class="text-3xl font-medium lg:text-[36px]">Portfolio</h1>
+                <h2 class="text-2xl font-light lg:text-[27px]">Previous work and portfolio</h2>
                 <p
-                    class="text-xl lg:text-2xl"
+                    class="text-xl lg:text-[24px] font-thin"
                 >Constant improvement for businesses and technologies is what we aim for, by devoting our expertise and hard work into each project we work on.</p>
             </div>
             <div class="w-full py-2 my-auto lg:ml-auto lg:w-1/2">
@@ -13,27 +13,12 @@
                     <swiper class="swiper" :options="swiperOption">
                         <swiper-slide v-for="p in ports" :key="p.index">
                             <div
-                                class="w-[500px] h-[450px]"
+                                class="w-[600px] h-[500px]"
                                 @click="$router.push(`/portfolio/${p.id}`)"
                             >
                                 <img class="object-cover w-full h-full" :src="p.thumbnail_path" alt />
                             </div>
                         </swiper-slide>
-                        <!-- <swiper-slide>
-                            <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                        </swiper-slide>
-                        <swiper-slide>
-                            <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                        </swiper-slide>
-                        <swiper-slide>
-                            <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                        </swiper-slide>
-                        <swiper-slide>
-                            <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                        </swiper-slide>
-                        <swiper-slide>
-                            <img src="/img13.png" class="w-full h-full bg-black rounded-lg" alt />
-                        </swiper-slide>-->
                     </swiper>
                 </client-only>
             </div>
@@ -54,7 +39,7 @@ export default {
         return {
             swiperOption: {
                 slidesPerView: 2,
-                spaceBetween: 460,
+                spaceBetween: 620,
                 centeredSlides: false,
                 pagination: {
                     el: '.swiper-pagination',

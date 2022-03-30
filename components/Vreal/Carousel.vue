@@ -36,7 +36,7 @@
                 </swiper>
             </div>
         </client-only>
-        <nuxt-link to="#why">
+        <nuxt-link class="my-4" to="#why">
             <div class="px-4 mx-auto bg-gray-200 rounded-3xl w-fit py-7">
                 <svg
                     class="w-6 h-6 animate-bounce"
@@ -80,18 +80,22 @@ export default {
 <style>
 .swipe {
     clip-path: polygon(
-        0 0,
-        8% 5%,
-        25% 10%,
-        71% 10%,
-        89% 4%,
-        100% 0,
-        100% 100%,
-        92% 93%,
-        73% 88%,
-        28% 88%,
-        8% 93%,
-        0 100%
+        0% 30%,
+        10% 17%,
+        25% 1%,
+        72% 1%,
+        86% 18%,
+        88% 20%,
+        90% 22%,
+        100% 30%,
+        100% 75%,
+        87% 88%,
+        78% 100%,
+        75% 100%,
+        73% 100%,
+        25% 100%,
+        12% 85%,
+        0% 71%
     );
 }
 </style>

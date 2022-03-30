@@ -1,6 +1,8 @@
 <template>
     <div class="bg-[#222222] diver">
         <SmartyNav />
+        <cursor-fx ref="cursor" outside-size="79px" oclor-hover="#FFFFFF" color="#FFFFFF" disabled />
+
         <div class="container mx-auto">
             <h1
                 class="2xl:text-[60px] font-bold max-w-[268px] 2xl:max-w-[320px] lg:text-[40px] text-[#00CFFF]"
@@ -45,7 +47,10 @@
 import Smartfooter from "~/components/Smarty/Smartfooter.vue";
 import SmartProjects from "~/components/Smarty/SmartProjects.vue";
 export default {
-    components: { Smartfooter, SmartProjects }
+    components: { Smartfooter, SmartProjects },
+    mounted() {
+        this.$refs.cursor.start()
+    },
 }
 </script>
 
