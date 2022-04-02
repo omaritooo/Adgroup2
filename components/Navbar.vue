@@ -1,6 +1,6 @@
 <template>
-    <div class="pb-40 lg:pr-32">
-        <nav class="relative z-50 flex flex-wrap justify-around">
+    <div class="container pb-40 mx-auto">
+        <nav class="container relative z-50 flex flex-wrap justify-between px-10 mx-auto">
             <div>
                 <nuxt-link class to="/">
                     <img class="relative z-50 w-48 h-48" src="/ad-logo.svg" />
@@ -9,7 +9,7 @@
             <div class="my-auto">
                 <div
                     :class="showMenu ? 'flex opacity-100 transition duration-500' : 'hidden opacity-0'"
-                    class="absolute z-50 transition duration-500"
+                    class="absolute z-50 transition duration-500 -translate-x-44"
                 >
                     <transition name="fade">
                         <ul
@@ -57,7 +57,7 @@
                 </div>
                 <div class="my-auto">
                     <button
-                        class="block my-auto text-xl leading-none text-black bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer translate-x-44 h-fit w-fit focus:outline-none"
+                        class="block my-auto text-xl leading-none text-black bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer h-fit w-fit focus:outline-none"
                         type="button"
                     >
                         <button class="relative text-gray-500 focus:outline-none" @click="menu">

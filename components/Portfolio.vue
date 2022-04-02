@@ -13,7 +13,7 @@
                     <swiper class="swiper" :options="swiperOption">
                         <swiper-slide v-for="p in ports" :key="p.index">
                             <div
-                                class="w-[600px] h-[500px]"
+                                class="w-[621px] h-[593px]"
                                 @click="$router.push(`/portfolio/${p.id}`)"
                             >
                                 <img
@@ -26,14 +26,16 @@
                                 class="mt-5 whitespace-nowrap align-middle flex gap-x-20 text-[28px] font-bold"
                             >
                                 {{ p.title }}
-                                <div class="px-4 py-2 text-[20px] my-auto bg-black rounded-lg">
+                                <div class="px-4 py-1 text-[20px] my-auto bg-black rounded-lg">
                                     <div
                                         class="text-transparent my-auto bg-clip-text bg-gradient-to-t from-[#00BDD6] via-[#33C6C6] to-[#7BD4AF]"
                                     >{{ p.company.title }}</div>
                                 </div>
                             </div>
 
-                            <div class="w-[550px]">{{ p.description }}</div>
+                            <div
+                                class="text-[20px] font-[300] leading-[23px] mt-4 w-[550px]"
+                            >{{ p.description }}</div>
                         </swiper-slide>
                     </swiper>
                 </client-only>
@@ -57,6 +59,7 @@ export default {
                 slidesPerView: 2,
                 spaceBetween: 620,
                 centeredSlides: false,
+                loop: true,
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true

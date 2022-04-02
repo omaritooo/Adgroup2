@@ -22,10 +22,11 @@
                 </div>
                 <div
                     data-cursor-hover
-                    class="relative z-30 cursor-pointer text-white font-extralight h-full my-auto text-center w-fit bg-gradient-to-b from-[#00CFFF] to-[#006880]"
+                    class="relative z-30 cursor-pointer text-white font-light h-full my-auto text-center w-fit bg-gradient-to-b from-[#00CFFF] to-[#006880]"
                     @click="toggle1"
                 >
-                    <div class="m-auto text-3xl rotate-90 lg:my-72">Vreal</div>
+                    <div class="m-auto text-[24px] rotate-90 lg:mt-72">VREAL</div>
+                    <div class="mx-auto bg-white h-[150px] mt-10 w-[2px]"></div>
                 </div>
             </div>
             <div class="flex h-screen">
@@ -53,8 +54,9 @@
                     @click="toggle2"
                 >
                     <div
-                        class="mx-auto my-auto text-3xl text-center text-white rotate-90 font-extralight lg:my-72"
+                        class="mx-auto my-auto text-[24px] text-center text-white uppercase rotate-90 font-light lg:mt-72"
                     >Vividly</div>
+                    <div class="mx-auto bg-white h-[150px] mt-10 w-[2px]"></div>
                 </div>
             </div>
             <div class="flex h-screen">
@@ -83,12 +85,13 @@
                     @click="toggle3"
                 >
                     <div
-                        class="relative mx-auto my-auto text-3xl text-center text-white w-fit font-extralight"
+                        class="relative mx-auto my-auto text-3xl font-light text-center text-white w-fit"
                     >
-                        <div class="flex rotate-90 lg:my-72">
+                        <div class="flex text-[24px] uppercase rotate-90 lg:mt-72">
                             Smarty
                             <!-- <div class="w-[55px] p-1 bg-white my-auto"></div> -->
                         </div>
+                        <div class="mx-auto bg-white h-[150px] mt-10 w-[2px]"></div>
                     </div>
                 </div>
             </div>

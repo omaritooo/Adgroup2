@@ -1,12 +1,17 @@
 <template>
     <div class="bg-[#F7F6F6]">
         <div
-            class="font-[700] mb-[52px] text-center text-[24px] leading-[36px] text-transparent bg-clip-text bg-gradient-to-l from-[#0CA092] to-[#74C38B]"
-        >Services</div>
+            class="font-[700] uppercase mb-[52px] text-center text-[24px] leading-[36px] text-transparent bg-clip-text bg-gradient-to-l from-[#0CA092] to-[#74C38B]"
+        >OuR Services</div>
         <client-only>
             <div>
                 <swiper class="h-full overflow-x-hidden swipe" :options="swiperOption">
-                    <swiper-slide v-for="inf in services" :key="inf.index">
+                    <swiper-slide
+                        v-for="inf in services"
+                        :key="inf.index"
+                        class="relative"
+                        @click="$router.push(`/vreal/services/${inf.id}`)"
+                    >
                         <div
                             class="relative z-30"
                             @click="$router.push(`/vreal/services/${inf.id}`)"
@@ -15,7 +20,17 @@
                                 :src="inf.thumbnail_path"
                                 class="w-full h-full bg-black rounded-lg"
                                 alt
+                                @click="$router.push(`/vreal/services/${inf.id}`)"
                             />
+                        </div>
+                        <div
+                            class="absolute top-0 left-0 z-30 w-full opacity-0 hover:opacity-100 transition-opacity duration-200 h-full bg-gradient-to-r from-[#0CA092] to-[#74C38B] text-white"
+                            @click="$router.push(`/vreal/services/${inf.id}`)"
+                        >
+                            <div
+                                class="absolute mx-auto text-center align-middle right-1/2 top-1/2"
+                                @click="$router.push(`/vreal/services/${inf.id}`)"
+                            >{{ inf.title }}</div>
                         </div>
                     </swiper-slide>
                     <!-- <swiper-slide>

@@ -8,19 +8,29 @@
             <img src="/vrealport.png" alt />
             <img class="lg:translate-y-[20px]" src="/vrealport.png" alt />
         </div>
-        <span class="font-[400] text-[18px] leading-[21px] lg:px-[195px]">See more</span>
-        <div class="flex relative flex-col lg:flex-row z-50 justify-center mt-[240px] gap-x-[40px]">
+        <span
+            class="font-[400] text-[18px] leading-[21px] lg:px-[195px]"
+            @click="cliiper = !cliiper"
+        >See more</span>
+        <div
+            v-if="cliiper"
+            class="flex relative flex-col lg:flex-row z-50 justify-center mt-[240px] gap-x-[40px]"
+        >
             <img class="-translate-y-[20px]" src="/vrealport.png" alt />
             <img src="/vrealport.png" alt />
             <img class="translate-y-[20px]" src="/vrealport.png" alt />
         </div>
-        <span class="font-[400] text-[18px] leading-[21px] px-[195px]">All Projects</span>
+        <span v-if="cliiper" class="font-[400] text-[18px] leading-[21px] px-[195px]">All Projects</span>
     </div>
 </template>
 
 <script>
 export default {
-
+    data() {
+        return {
+            cliiper: false
+        }
+    },
 }
 </script>
 

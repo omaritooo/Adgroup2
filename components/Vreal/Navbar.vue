@@ -1,6 +1,6 @@
 <template>
     <div class>
-        <div class="flex mx-auto container py-[50px]">
+        <div class="flex py-[50px]">
             <nav class="relative flex flex-wrap justify-center w-screen bg-blueGray-500">
                 <div class="container flex flex-wrap items-center justify-between">
                     <div

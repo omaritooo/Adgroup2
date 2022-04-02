@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full relative h-[80vh] overflow-x-hidden">
+    <div class="w-full relative h-[100vh] overflow-x-hidden">
         <Navbar class="absolute top-0 z-30" />
         <div class="absolute top-0 bg">
             <span class="text">The New Revolution of Real estate Technology</span>
@@ -17,7 +17,7 @@ export default {
 <style scoped>
 .bg {
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background: url("/header.png");
     background-position: center;
     background-size: cover;
@@ -27,7 +27,7 @@ export default {
     width: 363px;
     height: 24px;
     left: 80px;
-    top: 72vh;
+    top: 92vh;
 
     font-style: normal;
     font-weight: 300;

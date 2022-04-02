@@ -9,11 +9,11 @@
                 <p
                     class="text-xl font-thin text-center"
                 >AD GROUP is tech company using advanced technologies to provide the different sectors and industries such as real estate, education, media with solutions that can help them achieve their goals and increase their revenues. we are studying the industries, discovering their suffering and their needs to develop effective solutions that can help them in their marketing and sales.</p>
-                <button
+                <!-- <button
                     class="text-[#F6DE00] bg-transparent mt-10 p-4 border border-[#F6DE00] rounded-lg mx-auto"
-                >Know more!</button>
+                >Know more!</button>-->
             </div>
-            <div
+            <!-- <div
                 class="absolute p-4 mx-auto text-white rounded-full xl:bottom-6 xl:left-[40%] 2xl:bottom-20 2xl:left-[45%] flex flex-col gap-y-3"
             >
                 <svg
@@ -31,7 +31,7 @@
                     />
                 </svg>
                 <span class="text-xl font-thin">Our Services</span>
-            </div>
+            </div>-->
         </div>
     </div>
 </template>
