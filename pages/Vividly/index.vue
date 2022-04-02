@@ -3,6 +3,7 @@
         <Navbar class="relative z-30" />
         <Headly />
         <Returner />
+        <!-- <Blobs /> -->
         <Portfolio />
         <Stories />
         <cursor-fx ref="cursor" outside-size="79px" oclor-hover="#FFFFFF" color="#FFFFFF" disabled />
@@ -17,6 +18,7 @@ import Navbar from "~/components/Vividly/Navbar.vue";
 import Headly from "~/components/Vividly/Headly.vue";
 import Footly from "~/components/Vividly/Footly.vue";
 import Returner from "~/components/Returner.vue";
+// import Blobs from "~/components/Vividly/blobs.vue";
 export default {
     components: { Navbar, Headly, Portfolio, Stories, Footly, Returner },
     mounted() {

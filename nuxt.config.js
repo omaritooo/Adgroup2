@@ -1,4 +1,8 @@
+// eslint-disable-next-line nuxt/no-cjs-in-config
+const webpack = require("webpack");
+
 export default {
+
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
   server: {
@@ -25,6 +29,17 @@ export default {
         href: "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap", rel: "stylesheet"
       },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      {
+        src: "https://code.jquery.com/jquery-latest.min.js",
+        type: "text/javascript"
+      },
+      {
+        src: "jquery.connections.js",
+        type: "text/javascript"
+      },
+
     ]
   },
 
@@ -83,12 +98,31 @@ export default {
         implementation: require('sass'),
       },
     },
+    vendor: ["jquery", "bootstrap"],
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jquery: 'jquery',
+        'window.jQuery': 'jquery',
+        jQuery: 'jquery'
+      })
+    ],
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          exclude: /(node_modules)/
+        })
+      }
+    },
     postcss: {
       plugins: {
         tailwindcss: {},
         autoprefixer: {},
       },
     },
+  },
 
-  }
 }
+

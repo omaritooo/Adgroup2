@@ -23,35 +23,7 @@
                         <h1 class="text-[#C19B3F] ml-auto">Request a Demo</h1>
                     </div>-->
                     <div class="flex flex-col gap-y-[40px] my-auto mx-auto">
-                        <div class="flex flex-col gap-y-[1px] mx-auto group">
-                            <div class="flex gap-x-[15px] h-fit group-hover:opacity-25">
-                                <div class="flex gap-x-[13px] -translate-x-10">
-                                    <span
-                                        class="text-[28px] text-white font-[600] -translate-y-4"
-                                    >01</span>
-                                    <h1 class="font-normal text-white text-[33px]">Endless Ideas</h1>
-                                </div>
-                                <svg
-                                    class="my-auto"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                >
-                                    <path
-                                        id="Subtraction_7"
-                                        data-name="Subtraction 7"
-                                        d="M-1325,27a7.947,7.947,0,0,1-5.657-2.343A7.948,7.948,0,0,1-1333,19a8.009,8.009,0,0,0,8-8,7.947,7.947,0,0,1,5.657,2.343A7.947,7.947,0,0,1-1317,19a7.948,7.948,0,0,1-2.343,5.657A7.947,7.947,0,0,1-1325,27Z"
-                                        transform="translate(1333 -11)"
-                                        fill="#b18f3c"
-                                    />
-                                </svg>
-                            </div>
-                            <h2
-                                class="text-[60px] group-hover:opacity-25 text-white font-[600]"
-                            >Strong Branding</h2>
-                        </div>
-                        <nuxt-link to="/service" class="flex flex-col gap-y-[1px] mx-auto">
+                        <nuxt-link to="vividly/service" class="flex flex-col gap-y-[1px] mx-auto">
                             <div class="flex gap-x-[15px] h-fit">
                                 <div class="flex gap-x-[13px] -translate-x-10">
                                     <span
@@ -77,7 +49,7 @@
                             </div>
                             <h2 class="text-[60px] text-white font-[600]">Strong Branding</h2>
                         </nuxt-link>
-                        <nuxt-link to="/service" class="flex flex-col gap-y-[1px] mx-auto">
+                        <nuxt-link to="vividly/service" class="flex flex-col gap-y-[1px] mx-auto">
                             <div class="flex gap-x-[15px] h-fit">
                                 <div class="flex gap-x-[13px] -translate-x-10">
                                     <span
@@ -103,7 +75,7 @@
                             </div>
                             <h2 class="text-[60px] text-white font-[600]">Strong Branding</h2>
                         </nuxt-link>
-                        <nuxt-link to="/service" class="flex flex-col gap-y-[1px] mx-auto">
+                        <nuxt-link to="vividly/service" class="flex flex-col gap-y-[1px] mx-auto">
                             <div class="flex gap-x-[15px] h-fit">
                                 <div class="flex gap-x-[13px] -translate-x-10">
                                     <span
@@ -129,7 +101,33 @@
                             </div>
                             <h2 class="text-[60px] text-white font-[600]">Strong Branding</h2>
                         </nuxt-link>
-                        <nuxt-link to="/service" class="flex flex-col gap-y-[1px] mx-auto">
+                        <nuxt-link to="vividly/service" class="flex flex-col gap-y-[1px] mx-auto">
+                            <div class="flex gap-x-[15px] h-fit">
+                                <div class="flex gap-x-[13px] -translate-x-10">
+                                    <span
+                                        class="text-[28px] text-white font-[600] -translate-y-4"
+                                    >01</span>
+                                    <h1 class="font-normal text-white text-[33px]">Endless Ideas</h1>
+                                </div>
+                                <svg
+                                    class="my-auto"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        id="Subtraction_7"
+                                        data-name="Subtraction 7"
+                                        d="M-1325,27a7.947,7.947,0,0,1-5.657-2.343A7.948,7.948,0,0,1-1333,19a8.009,8.009,0,0,0,8-8,7.947,7.947,0,0,1,5.657,2.343A7.947,7.947,0,0,1-1317,19a7.948,7.948,0,0,1-2.343,5.657A7.947,7.947,0,0,1-1325,27Z"
+                                        transform="translate(1333 -11)"
+                                        fill="#b18f3c"
+                                    />
+                                </svg>
+                            </div>
+                            <h2 class="text-[60px] text-white font-[600]">Strong Branding</h2>
+                        </nuxt-link>
+                        <nuxt-link to="vividly/service" class="flex flex-col gap-y-[1px] mx-auto">
                             <div class="flex gap-x-[15px] h-fit">
                                 <div class="flex gap-x-[13px] -translate-x-10">
                                     <span
@@ -292,7 +290,7 @@
             </div>-->
             <button
                 :class="{ 'bg-[#202020] ': serv, 'bg-[#2C2C2C]': !serv }"
-                class="absolute z-50 -top-72 -right-[128vw] transition-colors items-start align-top duration-150 rounded-l-full rounded-full h-[1080px] w-[1920px]"
+                class="absolute z-50 -top-72 2xl:-right-[96vw] lg:-right-[128vw] transition-colors items-start align-top duration-150 rounded-l-full rounded-full h-[1080px] w-[1920px]"
                 @click="serv = !serv"
             >
                 <div
@@ -340,46 +338,75 @@
             </button>
             <div class="relative">
                 <!-- <img src="/Group 104.png" class="relative z-30 2xl:max-w-full lg:max-w-[600px]" alt /> -->
-                <div class="absolute top-0 left-0 z-30 group">
-                    <div
+                <div class="z-30 group">
+                    <!-- <div
                         class="absolute top-0 w-[349px] h-[349px] scale-110 z-30 group-hover:scale-125"
                     >
                         <img src="/blob1.png" class="relative z-40 object-cover" />
                     </div>
-                    <!-- <div class="relative z-20 blob1"></div> -->
+                     <div class="relative z-20 blob1"></div> 
 
                     <div class="absolute z-20 group-hover:scale-x-105 top-2 -left-2 blob1r"></div>
-                    <div class="absolute z-20 text-white text-[24px] -right-4 top-1/2">Unique</div>
+                    <div class="absolute z-20 text-white text-[24px] -right-4 top-1/2">Unique</div>-->
+                    <div
+                        class="mx-auto justify-center flex flex-row gap-x-10 flex-wrap max-w-[800px]"
+                    >
+                        <Blobs />
+                        <Blobs />
+                        <Blobs />
+                        <Blobs />
+                        <Blobs />
+                    </div>
                 </div>
+                <!-- <div class="relative z-30 w-32 h-32">
+                    <svg class="relative z-30" viewBox="0 0 200 200">
+                        <path d fill="#FFFFFF" />
+                    </svg>
+                </div>-->
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import Blobs from "./blobs.vue"
 export default {
+    components: { Blobs },
     data() {
         return {
             serv: false
-        }
+        };
     },
     watch: {
         serv(val) {
             if (val) {
                 document
-                    .querySelector('body')
-                    .classList.add('overflow-hidden', 'h-screen', 'w-screen')
-                return
+                    .querySelector("body")
+                    .classList.add("overflow-hidden", "h-screen", "w-screen");
+                return;
             }
-
             document
-                .querySelector('body')
-                .classList.remove('overflow-hidden', 'h-screen', 'w-screen')
+                .querySelector("body")
+                .classList.remove("overflow-hidden", "h-screen", "w-screen");
         }
+    },
+    mounted() {
+        // $('#parent').connections({ to: '.child' });
+
+        // jQuery(document).ready(function () {
+        // });;
+
+    },
+    methods: {
+
     },
 }
 </script>
 <style scoped>
+.ssvg {
+    width: 90vmin;
+    height: 90vmin;
+}
 .lotus {
     background: #c09a3e 0% 0% no-repeat padding-box;
     border-radius: 454px 0px 454px 8px;

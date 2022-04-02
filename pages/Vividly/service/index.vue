@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#202020] relative">
+    <div class="bg-[#202020] relative overflow-hidden">
         <cursor-fx ref="cursor" outside-size="79px" oclor-hover="#FFFFFF" color="#FFFFFF" disabled />
         <Navbar class="absolute top-0 z-50 bg-transparent left-10" />
         <div
@@ -143,13 +143,13 @@
         <div class="flex justify-between">
             <button
                 :class="{ 'bg-[#202020] ': serv, 'bg-[#2C2C2C]': !serv }"
-                class="absolute z-50 top-40 right-0 transition-colors duration-150 rounded-l-full rounded-y-full h-[300px] w-[104px]"
+                class="absolute z-50 -top-12 2xl:-right-[96vw] lg:-right-[128vw] transition-colors items-start align-top duration-150 rounded-l-full rounded-full h-[1080px] w-[1920px]"
                 @click="serv = !serv"
             >
                 <div
                     v-if="!serv"
                     data-cursor-hover
-                    class="text-[24px] text-white flex gap-x-2 -rotate-90"
+                    class="text-[24px] text-white absolute -left-4 flex gap-x-2 align-top -rotate-90"
                 >
                     Services
                     <svg
@@ -167,7 +167,11 @@
                         />
                     </svg>
                 </div>
-                <div v-if="serv" class="text-[24px] flex text-white gap-x-2 -rotate-90">
+                <div
+                    v-if="serv"
+                    data-cursor-hover
+                    class="text-[24px] text-white absolute -left-4 flex gap-x-2 align-top -rotate-90"
+                >
                     close
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -189,10 +193,8 @@
                 <div>
                     <h1>#packaging / #branding /#brandIdentity</h1>
 
-                    <h2 class="2xl:text-[80px] lg:text-[60px]">
-                        Endless Ideas of
-                        Strong Branding
-                    </h2>
+                    <h2 class="2xl:text-[80px] lg:text-[60px]">Endless Ideas of</h2>
+                    <h2 class="2xl:text-[80px] lg:text-[60px]">Strong Branding</h2>
                 </div>
             </div>
             <div>
