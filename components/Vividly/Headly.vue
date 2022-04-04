@@ -290,7 +290,7 @@
             </div>-->
             <button
                 :class="{ 'bg-[#202020] ': serv, 'bg-[#2C2C2C]': !serv }"
-                class="absolute z-50 -top-72 2xl:-right-[96vw] lg:-right-[128vw] transition-colors items-start align-top duration-150 rounded-l-full rounded-full h-[1080px] w-[1920px]"
+                class="absolute z-50 -top-72 2xl:-right-[96vw] lg:-right-[94vw] transition-colors items-start align-top duration-150 rounded-l-full rounded-full h-[100vh] w-[100vw]"
                 @click="serv = !serv"
             >
                 <div

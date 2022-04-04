@@ -31,22 +31,34 @@
                     class="flex relative z-40 flex-row max-w-[1465px] flex-wrap gap-x-[50px] gap-y-[50px]"
                 >
                     <nuxt-link to="/vividly/project">
-                        <img src="/Mask Group 4.png" alt />
+                        <div class="w-[455px] h-[618px]">
+                            <img class="object-cover" src="/Mask Group 4.png" alt />
+                        </div>
                     </nuxt-link>
                     <nuxt-link to="/vividly/project">
-                        <img src="/Mask Group 4.png" alt />
+                        <div class="w-[455px] h-[618px]">
+                            <img class="object-cover" src="/Mask Group 4.png" alt />
+                        </div>
                     </nuxt-link>
                     <nuxt-link to="/vividly/project">
-                        <img src="/Mask Group 4.png" alt />
+                        <div class="w-[455px] h-[618px]">
+                            <img class="object-cover" src="/Mask Group 4.png" alt />
+                        </div>
                     </nuxt-link>
                     <nuxt-link to="/vividly/project">
-                        <img src="/Mask Group 4.png" alt />
+                        <div class="w-[455px] h-[618px]">
+                            <img class="object-cover" src="/Mask Group 4.png" alt />
+                        </div>
                     </nuxt-link>
                     <nuxt-link to="/vividly/project">
-                        <img src="/Mask Group 4.png" alt />
+                        <div class="w-[455px] h-[618px]">
+                            <img class="object-cover" src="/Mask Group 4.png" alt />
+                        </div>
                     </nuxt-link>
                     <nuxt-link to="/vividly/project">
-                        <img src="/Mask Group 4.png" alt />
+                        <div class="w-[455px] h-[618px]">
+                            <img class="object-cover" src="/Mask Group 4.png" alt />
+                        </div>
                     </nuxt-link>
                 </div>
             </div>

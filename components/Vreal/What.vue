@@ -1,6 +1,6 @@
 <template>
     <div class="container flex justify-around mx-auto">
-        <div class="py-[340px] flex flex-col text-center gap-y-2">
+        <div class="my-[340px] flex flex-col text-center gap-y-2">
             <h1
                 class="font-semibold text-[24px] leading-[36px] text-transparent bg-clip-text bg-gradient-to-l from-[#0CA092] to-[#74C38B]"
             >What’s VReal?</h1>
@@ -10,7 +10,7 @@
         </div>
         <div class="relative z-30 max-w-[600px] my-auto">
             <client-only>
-                <swiper class="swiper" :options="swiperOption">
+                <swiper class="relative swiper" :options="swiperOption">
                     <swiper-slide class="w-[461px] h-[301px]">
                         <img class="object-cover" src="/img13.png" alt />
                         <div></div>
@@ -23,10 +23,54 @@
                         <img class="object-cover" src="/img13.png" alt />
                         <div></div>
                     </swiper-slide>
-                    <div slot="pagination" class="swiper-pagination"></div>
+                    <div slot="pagination" class="absolute -bottom-12 swiper-pagination"></div>
                 </swiper>
             </client-only>
         </div>
+        <!-- <slick
+            ref="slick"
+            :options="slickOptions"
+            @afterChange="handleAfterChange"
+            @beforeChange="handleBeforeChange"
+            @breakpoint="handleBreakpoint"
+            @destroy="handleDestroy"
+            @edge="handleEdge"
+            @init="handleInit"
+            @reInit="handleReInit"
+            @setPosition="handleSetPosition"
+            @swipe="handleSwipe"
+            @lazyLoaded="handleLazyLoaded"
+            @lazyLoadError="handleLazeLoadError"
+        >
+            <a href="http://placehold.it/2000x1000">
+                <img src="/img13.png" alt />
+            </a>
+            <a href="http://placehold.it/2000x1000">
+                <img src="/img13.png" alt />
+            </a>
+            <a href="http://placehold.it/2000x1000">
+                <img src="/img13.png" alt />
+            </a>
+            <a href="http://placehold.it/2000x1000">
+                <img src="/img13.png" alt />
+            </a>
+            <a href="http://placehold.it/2000x1000">
+                <img src="/img13.png" alt />
+            </a>
+        </slick>-->
+        <!-- <div class="relative z-30 max-w-[462px] h-[600px] my-auto">
+            <ssr-carousel class="h-[650px]" :slide-per-page="1" :autoplay-delay="3" loop show-dots>
+                <div class="slide w-[461px] h-[301px]">
+                    <img class="object-fit" src="/img13.png" alt />
+                </div>
+                <div class="slide w-[461px] h-[301px]">
+                    <img class="object-fit" src="/img13.png" alt />
+                </div>
+                <div class="slide w-[461px] h-[301px]">
+                    <img class="object-fit" src="/img13.png" alt />
+                </div>
+            </ssr-carousel>
+        </div>-->
     </div>
 </template>
 
@@ -48,7 +92,11 @@ export default {
 
                 }
             },
-            ports: null
+            ports: null,
+            slickOptions: {
+                slidesToShow: 3,
+                // Any other options that can be got from plugin documentation
+            },
         }
     },
 }

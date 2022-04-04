@@ -28,7 +28,7 @@
                             @click="$router.push(`/vreal/services/${inf.id}`)"
                         >
                             <div
-                                class="absolute mx-auto text-center align-middle right-1/2 top-1/2"
+                                class="absolute content-center mx-auto text-center align-middle right-1/2 top-1/2"
                                 @click="$router.push(`/vreal/services/${inf.id}`)"
                             >{{ inf.title }}</div>
                         </div>

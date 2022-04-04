@@ -64,7 +64,8 @@ export default {
     { src: '@/plugins/swiper.js', ssr: 'false' },
     { src: '@/plugins/carousel.js', ssr: 'false' },
     { src: '@/plugins/cursor.js', ssr: 'false' },
-    { src: '@/plugins/horizontal.js', ssr: 'false' }
+    { src: '@/plugins/horizontal.js', ssr: 'false' },
+    { src: '@/plugins/slick.js', ssr: 'false' }
   ],
 
 
@@ -75,7 +76,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    '@nuxt/postcss8'
+    '@nuxt/postcss8',
+    'vue-ssr-carousel/nuxt'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
