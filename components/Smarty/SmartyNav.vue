@@ -84,9 +84,9 @@
                 :class="showMenu ? 'flex' : 'hidden'"
                 class="fixed inset-0 top-0 left-0 z-50 w-screen h-screen overflow-hidden transition-all duration-150 bg-[#222222]"
             >
-                <div class="container h-screen mx-auto">
+                <div class="container flex justify-between h-screen mx-auto">
                     <div
-                        class="flex flex-col gap-y-[5px] h-screen font-extralight w-fit mt-32 my-auto text-white"
+                        class="flex flex-col gap-y-[5px] h-screen font-extralight w-fit mt-48 my-auto text-white"
                     >
                         <div
                             class="text-[80px] hover:text-[#00CFFF] transition-colors duration-150 h-fit"
@@ -101,6 +101,9 @@
                             class="text-[80px] hover:text-[#00CFFF] transition-colors duration-150"
                         >Showcases</div>
                     </div>
+                    <div class="my-auto">
+                        <SmartSwiper />
+                    </div>
                 </div>
             </div>
         </div>
@@ -108,25 +111,26 @@
 </template>
 
 <script>
+import SmartSwiper from "./SmartSwiper.vue"
 export default {
+    components: { SmartSwiper },
     data() {
         return {
             showMenu: false,
-        }
+        };
     },
     watch: {
         // eslint-disable-next-line vue/no-arrow-functions-in-watch
         showMenu: (val) => {
             if (val) {
                 document
-                    .querySelector('body')
-                    .classList.add('overflow-hidden', 'h-screen', 'w-screen')
-                return
+                    .querySelector("body")
+                    .classList.add("overflow-hidden", "h-screen", "w-screen");
+                return;
             }
-
             document
-                .querySelector('body')
-                .classList.remove('overflow-hidden', 'h-screen', 'w-screen')
+                .querySelector("body")
+                .classList.remove("overflow-hidden", "h-screen", "w-screen");
         }
     },
     mounted() {
@@ -136,9 +140,9 @@ export default {
     methods: {
         meth() { },
         toggleNavbar() {
-            this.showMenu = !this.showMenu
+            this.showMenu = !this.showMenu;
         },
-    },
+    }
 }
 </script>
 

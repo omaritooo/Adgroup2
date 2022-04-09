@@ -18,7 +18,7 @@
                 >Request a demo</button>
             </div>
             <client-only>
-                <div>
+                <!-- <div>
                     <swiper
                         class="overflow-y-hidden hidden lg:flex w-fit lg:h-[60vh] swiper vertical"
                         :options="swiperOptionv"
@@ -53,19 +53,22 @@
                         slot="pagination"
                         class="mx-10 swiper-pagination-bullets swiper-pagination-v"
                     ></div>
-                </div>
+                </div>-->
+                <SmartSwiper />
             </client-only>
         </div>
     </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+// import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
+import SmartSwiper from '@/components/Smarty/SmartSwiper.vue'
 export default {
     components: {
-        Swiper,
-        SwiperSlide
+        // Swiper,
+        // SwiperSlide
+        SmartSwiper
     },
     data() {
         return {
