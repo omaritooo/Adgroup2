@@ -5,10 +5,10 @@
         >
             <div class="flex flex-col gap-y-8">
                 <div class="flex gap-x-12">
-                    <img class="relative z-50 w-20 h-20 lg:w-52 lg:h-52" src="/vrealvert.svg" alt />
-                    <img class="relative z-50 w-20 h-20 lg:w-52 lg:h-52" src="/adgroupvert.svg" alt />
+                    <img class="relative z-50 w-20 h-20 lg:w-32 lg:h-32 xl:w-52 xl:h-52" src="/vrealvert.svg" alt />
+                    <img class="relative z-50 w-20 h-20 lg:w-32 lg:h-32 xl:w-52 xl:h-52" src="/adgroupvert.svg" alt />
                 </div>
-                <div class="flex flex-col text-2xl font-light text-white gap-y-3">
+                <div class="flex flex-col text-lg font-light text-white xl:text-2xl gap-y-3">
                     <div class="flex text-white gap-x-3">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

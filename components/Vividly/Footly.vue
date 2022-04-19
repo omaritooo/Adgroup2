@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-[40px] pb-[103px] flex justify-center gap-x-[49px]">
+    <div class="pt-[40px] pb-[103px] flex flex-col lg:flex-row justify-center gap-x-[49px]">
         <div>
             <div class="flex gap-x-[15px] h-fit align-top mb-[170px]">
                 <svg
@@ -144,7 +144,7 @@
             </div>
         </div>
         <div>
-            <form class="flex flex-col max-w-[854px] text-[#FFFFFF] w-fit gap-y-3">
+            <form class="flex flex-col max-w-[400px] lg:max-w-[854px] text-[#FFFFFF] w-fit gap-y-3">
                 <div class="max-w-[654px] flex gap-x-[51px] h-[73.97px]">
                     <input
                         type="text"
@@ -170,7 +170,7 @@
                     class="w-[654px] p-4 placeholder-current bg-[#181818] border border-black border-opacity-75 rounded-lg h-1/2"
                 ></textarea>
                 <button
-                    class="w-[654px] py-4 text-black text-2xl placeholder-current bg-[#C19B3F] border rounded-b-lg bg-site-babyblue border-opacity-20"
+                    class="w-[400px] lg:w-[654px] py-4 text-black text-2xl placeholder-current bg-[#C19B3F] border rounded-b-lg bg-site-babyblue border-opacity-20"
                 >Send</button>
             </form>
         </div>

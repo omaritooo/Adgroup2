@@ -5,7 +5,7 @@
             OuR Services</div>
         <client-only>
             <div>
-                <swiper class="h-full overflow-x-hidden swipe" :options="swiperOption">
+                <swiper class="h-full overflow-x-hidden swipe" :options="swiperOption" >
                     <swiper-slide v-for="inf in services" :key="inf.index" class="relative"
                         @click="$router.push(`/vreal/services/${inf.id}`)">
                         <div class="relative z-30" @click="$router.push(`/vreal/services/${inf.id}`)">
@@ -73,8 +73,8 @@ export default {
 
 <style>
 .swipe {
-    /* clip-path: ellipse(66% 51% at 50% 51%); */
-    clip-path: ellipse(50% 50% at 50% 50%);
+    clip-path: ellipse(61% 45% at 51% 45%);
+    /* clip-path: ellipse(50% 50% at 50% 50%); */
 
 }
 </style>

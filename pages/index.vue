@@ -14,6 +14,7 @@
 
     <Portfolio id="portfolio" />
     <Clients />
+    <!-- <SmartCarousel /> -->
     <Footer id="contact" />
   </div>
 </template>
@@ -21,10 +22,13 @@
 <script>
 import Accordion from "~/components/Accordion.vue";
 import Navbar from "~/components/Navbar.vue";
+// import SmartCarousel from "~/components/Smarty/SmartCarousel.vue";
 // import MobileNav from "~/components/MobileNav.vue";
 // import Sample from "~/components/Sample.vue";
 export default {
-  components: { Accordion, Navbar, }
+  components: { Accordion, Navbar
+  
+  }
 }
 </script>
 

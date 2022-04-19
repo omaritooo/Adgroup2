@@ -1,8 +1,8 @@
 <template>
     <div
-        class="w-screen my-20 lg:py-[340px] lg:px-[280px] bg-gradient-to-l from-[#0CA092] to-[#74C38B]"
+        class="w-screen my-20 py-10 h-screen lg:py-[340px] lg:px-[280px] bg-gradient-to-l from-[#0CA092] to-[#74C38B]"
     >
-        <div class="flex flex-col text-center gap-y-2">
+        <div class="flex flex-col my-auto text-center gap-y-2">
             <h1 class="font-semibold text-[24px] leading-[36px] text-black">Why VReal?</h1>
             <p
                 class="font-[300] text-[18px] leading-[27px] max-w-[1016px] mx-auto"
